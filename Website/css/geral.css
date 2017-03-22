@@ -1,0 +1,173 @@
+/* Variaveis */
+/* Mixins */
+/* Media Querys */
+/* TAGS */
+body {
+  position: relative;
+}
+
+/* DIV LIMITE */
+@media (max-width: 640px) {
+  .limite {
+    height: 100%;
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .limite {
+    height: 100%;
+    overflow: hidden;
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .limite {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .limite {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1921px) {
+  .limite {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1600px;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+/* FONT-SIZE */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+h1 {
+  font-size: 3.157em;
+}
+
+h2 {
+  font-size: 2.369em;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+h4 {
+  font-size: 1.333em;
+}
+
+/* Titulos */
+.titulos-a,
+.subtitulo-a,
+.titulos-b,
+.subtitulo-b,
+.titulos-separador {
+  margin-bottom: 10px;
+}
+
+.titulos-a,
+.subtitulos-a,
+.titulos-b,
+.subtitulos-b {
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+.titulos-a,
+.subtitulos-a {
+  color: #111111;
+}
+
+.titulos-b,
+.subtitulos-b {
+  color: #fefefe;
+}
+
+.titulos-separador-a,
+.titulos-separador-b {
+  height: 20px;
+  margin: 0 auto;
+  -webkit-transition: background-size 1s;
+  transition: background-size 1s;
+  width: 140px;
+}
+
+.titulos-separador-a {
+  background: -webkit-linear-gradient(left, transparent, #111111, transparent) no-repeat center/0px 1px;
+  background: linear-gradient(to right, transparent, #111111, transparent) no-repeat center/0px 1px;
+}
+
+.titulos-separador-b {
+  background: -webkit-linear-gradient(left, transparent, #fefefe, transparent) no-repeat center/0px 1px;
+  background: linear-gradient(to right, transparent, #fefefe, transparent) no-repeat center/0px 1px;
+}
+
+.ativo .titulos-separador-a,
+.ativo .titulos-separador-b {
+  background-size: 140px 1px;
+}
+
+/* Titulos efeito */
+.titulos-a,
+.titulos-b {
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.subtitulos-a,
+.subtitulos-b {
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.ativo .titulos-a,
+.ativo .titulos-b,
+.ativo .subtitulos-a,
+.ativo .subtitulos-b {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
