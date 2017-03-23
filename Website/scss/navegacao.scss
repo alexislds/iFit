@@ -1,7 +1,7 @@
 @import "utilitarios";
 
 .navegacao{
-  align-items:center; background:rgba(red, .3); display:flex; flex-direction:column; justify-content:space-between; height:100vh; padding:10px; position:fixed; transition:transform 300ms; width:150px;
+  align-items:center; background:#6E2B77; display:flex; flex-direction:column; justify-content:space-between; height:100vh; padding:10px; position:fixed; transition:transform 300ms; width:150px;
 
   &-logo{background:green; height:70px; width:70px;}
 
@@ -10,8 +10,9 @@
     &-item:not(:first-of-type){margin-top:20px;}
   }
 
-  &-botao{background:red; height:100px; left:100%; position:absolute; top:50%; transform:translateY(-50%); transition:opacity 400ms; width:100px;}
+  &-botao{background:red; height:100px; left:100%; position:absolute; top:50%; transform:translateY(-50%); transition:opacity 400ms; width:100px; background: url(../img/seta-navegacao.png); background-repeat: no-repeat;  animation: pulandoBotao 3s infinite;}
 }
+
 
 .navegacao.aberta{
   transform:translateX(0);
@@ -22,4 +23,21 @@
   transform:translateX(-100%);
 
   .navegacao-botao{opacity:1;}
+}
+
+
+@keyframes pulandoBotao {
+  0% {
+    background-position: left center;  
+      
+  }
+
+  50% {
+    background-position: 20px center;
+  }
+    
+100%{
+    background-position: left center;
+    }    
+    
 }

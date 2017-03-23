@@ -5,7 +5,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(255, 0, 0, 0.3);
+  background: #6E2B77;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,6 +53,10 @@
   -webkit-transition: opacity 400ms;
   transition: opacity 400ms;
   width: 100px;
+  background: url(../img/seta-navegacao.png);
+  background-repeat: no-repeat;
+  -webkit-animation: pulandoBotao 3s infinite;
+          animation: pulandoBotao 3s infinite;
 }
 
 .navegacao.aberta {
@@ -71,4 +75,28 @@
 
 .navegacao.fechada .navegacao-botao {
   opacity: 1;
+}
+
+@-webkit-keyframes pulandoBotao {
+  0% {
+    background-position: left center;
+  }
+  50% {
+    background-position: 20px center;
+  }
+  100% {
+    background-position: left center;
+  }
+}
+
+@keyframes pulandoBotao {
+  0% {
+    background-position: left center;
+  }
+  50% {
+    background-position: 20px center;
+  }
+  100% {
+    background-position: left center;
+  }
 }
