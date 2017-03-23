@@ -1,6 +1,8 @@
 /* Variaveis */
 /* Mixins */
 /* Media Querys */
-body {
-  background: red;
+.home {
+  background: green;
+  min-height: 100vh;
+  width: 100%;
 }

@@ -9,6 +9,9 @@
   <title>iFit</title>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <?php include 'navegacao.php'; ?>
+  <section class="home"></section>
+
+  <script src="../js/navegacao.js"></script>
 </body>
 </html>
