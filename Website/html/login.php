@@ -11,7 +11,7 @@
 <body>
   <?php include 'navegacao.php'; ?>
   <main class="main">
-    <section class="home"></section>
+    <section class="login"></section>
   </main>
   <script src="../js/navegacao.js"></script>
 </body>

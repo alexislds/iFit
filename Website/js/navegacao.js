@@ -1,13 +1,13 @@
 animacaoNavegacao();
 
 function animacaoNavegacao() {
-  var $home         = document.querySelector('.home');
+  var $main         = document.querySelector('.main');
   var $navegacao    = document.querySelector('.navegacao');
   var $navegacaoBtn = $navegacao.querySelector('.navegacao-botao');
 
   var statusNavegacao = "aberto";
 
-  $home.addEventListener('click', function() {
+  $main.addEventListener('click', function() {
     if(statusNavegacao == "aberto") {
       $navegacao.classList.add('fechada');
       $navegacao.classList.remove('aberta');
