@@ -1,7 +1,7 @@
 /* Variaveis */
 /* Mixins */
 /* Media Querys */
-.login {
+.login, .cadastro {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -16,15 +16,13 @@
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Lato", sans-serif;
-  height: 300px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  width: 350px;
 }
 
-.login::before {
+.login::before, .cadastro::before {
   background: #fefefe;
   border-radius: 50%;
   content: '';
@@ -37,7 +35,7 @@
   width: 70px;
 }
 
-.login-limite {
+.login-limite, .cadastro-limite {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -50,7 +48,7 @@
           justify-content: center;
 }
 
-.login-titulo {
+.login-titulo, .cadastro-titulo {
   background: #6E2B77;
   color: #fefefe;
   font-family: "Lato", sans-serif;
@@ -60,63 +58,75 @@
   width: 100%;
 }
 
-.login-input {
+.login-input, .cadastro-input {
   border: 1px solid #ededed;
   border-radius: 3px;
   color: #ccc;
   font-family: "Lato", sans-serif;
-  padding: 10px 5px 10px 40px;
+  padding: 10px 10px 10px 10px;
   -webkit-transition: all 300ms;
   transition: all 300ms;
   width: calc(100% - 40px);
 }
 
-.login-input:focus {
+.login-input:focus, .cadastro-input:focus {
   color: #6E2B77;
   border: 1px solid #6E2B77;
 }
 
-.login-input::-webkit-input-placeholder {
+.login-input::-webkit-input-placeholder, .cadastro-input::-webkit-input-placeholder {
   color: #ccc;
 }
 
-.login-input:-ms-input-placeholder {
+.login-input:-ms-input-placeholder, .cadastro-input:-ms-input-placeholder {
   color: #ccc;
 }
 
-.login-input::placeholder {
+.login-input::placeholder, .cadastro-input::placeholder {
   color: #ccc;
 }
 
-.login-input:focus::-webkit-input-placeholder {
+.login-input:focus::-webkit-input-placeholder, .cadastro-input:focus::-webkit-input-placeholder {
   color: #6E2B77;
 }
 
-.login-input:focus:-ms-input-placeholder {
+.login-input:focus:-ms-input-placeholder, .cadastro-input:focus:-ms-input-placeholder {
   color: #6E2B77;
 }
 
-.login-input:focus::placeholder {
+.login-input:focus::placeholder, .cadastro-input:focus::placeholder {
   color: #6E2B77;
 }
 
-.login-email {
+.login-texto, .cadastro-texto {
+  color: #ccc;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+.login-texto:hover, .cadastro-texto:hover {
+  color: #6E2B77;
+}
+
+.login-email, .cadastro-email {
   background: url(../img/login-email.png) no-repeat 10px center;
+  padding: 10px 10px 10px 40px;
 }
 
-.login-email:focus {
+.login-email:focus, .cadastro-email:focus {
   background: url(../img/login-email-focus.png) no-repeat 10px center;
 }
 
-.login-senha {
+.login-senha, .cadastro-senha {
   background: url(../img/login-senha.png) no-repeat 15px center;
+  padding: 10px 10px 10px 40px;
 }
 
-.login-senha:focus {
+.login-senha:focus, .cadastro-senha:focus {
   background: url(../img/login-senha-focus.png) no-repeat 15px center;
 }
 
-.login-botao {
+.login-botao, .cadastro-botao {
   background: #fefefe url(../img/login-botao-desativado.png) no-repeat center;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -128,7 +138,18 @@
   width: 56px;
 }
 
-.login-botao:hover {
+.login-botao:hover, .cadastro-botao:hover {
   background: #fefefe url(../img/login-botao.png) no-repeat center;
   border: 1px solid #6E2B77;
+}
+
+.cadastro {
+  width: 500px;
+  height: 570px;
+  display: none;
+}
+
+.login {
+  height: 300px;
+  width: 350px;
 }
