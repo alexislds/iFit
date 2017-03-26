@@ -12,6 +12,11 @@ body {
   width: 100%;
 }
 
+.esconde {
+  border: 1px solid red;
+  display: none !important;
+}
+
 /* DIV LIMITE */
 @media (max-width: 640px) {
   .limite {
