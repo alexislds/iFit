@@ -74,8 +74,18 @@ body {
 }
 
 .esconde {
-  border: 1px solid red;
-  display: none !important;
+  opacity: 0;
+  z-index: 1 !important;
+}
+
+.efeitoCartasDireita {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.efeitoCartasEsquerda {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /* DIV LIMITE */
@@ -85,6 +95,7 @@ body {
     overflow: hidden;
     padding: 20px;
     width: 100%;
+    position: relative;
   }
 }
 
@@ -93,6 +104,7 @@ body {
     height: 100%;
     overflow: hidden;
     padding: 40px;
+    position: relative;
   }
 }
 
@@ -103,6 +115,7 @@ body {
     max-width: 1000px;
     overflow: hidden;
     width: 100%;
+    position: relative;
   }
 }
 
@@ -113,6 +126,7 @@ body {
     max-width: 1400px;
     overflow: hidden;
     width: 100%;
+    position: relative;
   }
 }
 
@@ -123,6 +137,7 @@ body {
     max-width: 1600px;
     overflow: hidden;
     width: 100%;
+    position: relative;
   }
 }
 
@@ -261,24 +276,31 @@ body {
 /* Media Querys */
 .login,
 .cadastro {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  z-index: 2;
+  -webkit-transition: opacity 1000ms ,-webkit-transform 500ms;
+  transition: opacity 1000ms ,-webkit-transform 500ms;
+  transition: transform 500ms ,opacity 1000ms;
+  transition: transform 500ms ,opacity 1000ms ,-webkit-transform 500ms;
   background: #fefefe;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Lato", sans-serif;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
 }
 
 .login::before,
@@ -297,16 +319,8 @@ body {
 
 .login-limite,
 .cadastro-limite {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  overflow: visible;
 }
 
 .login-titulo,
@@ -424,9 +438,11 @@ body {
 .cadastro {
   width: 500px;
   height: 570px;
+  margin: -285px 0px 0px -250px;
 }
 
 .login {
   height: 300px;
   width: 350px;
+  margin: -150px 0px 0px -175px;
 }

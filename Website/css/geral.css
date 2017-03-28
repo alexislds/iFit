@@ -13,8 +13,18 @@ body {
 }
 
 .esconde {
-  border: 1px solid red;
-  display: none !important;
+  opacity: 0;
+  z-index: 1 !important;
+}
+
+.efeitoCartasDireita {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.efeitoCartasEsquerda {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /* DIV LIMITE */
@@ -24,6 +34,7 @@ body {
     overflow: hidden;
     padding: 20px;
     width: 100%;
+    position: relative;
   }
 }
 
@@ -32,6 +43,7 @@ body {
     height: 100%;
     overflow: hidden;
     padding: 40px;
+    position: relative;
   }
 }
 
@@ -42,6 +54,7 @@ body {
     max-width: 1000px;
     overflow: hidden;
     width: 100%;
+    position: relative;
   }
 }
 
@@ -52,6 +65,7 @@ body {
     max-width: 1400px;
     overflow: hidden;
     width: 100%;
+    position: relative;
   }
 }
 
@@ -62,5 +76,6 @@ body {
     max-width: 1600px;
     overflow: hidden;
     width: 100%;
+    position: relative;
   }
 }

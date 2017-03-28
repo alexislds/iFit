@@ -32,7 +32,9 @@
       </div>
     </section>
   </main>
-  <script src="../js/navegacao.js"></script>
+  <script src="../js/navegacao.js"></script> 
+  <script src="../js/jquery-3.1.1.min.js"></script>    
   <script src="../js/login.js"></script>
+     
 </body>
 </html>
