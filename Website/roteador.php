@@ -1,36 +1,22 @@
 <?php
-
 Class Roteador {
 
-  private $rotas = array();
-  private $acoes = array();
-
-  public function criarRota($url, $acao){
-    $this->rotas[] = trim($url, '/');
-    $this->acoes[] = $acao;
-  }
-
-  public function mapa(){
-    pr($this->rotas);
-    pr($this->acoes);
-  }
-
   public function rotear(){
-    $url = explode('/', $_SERVER['REQUEST_URI']);
-    $url = array_slice($url, 3);
-    $url = implode('/', $url);
+    include 'rotas.php';
 
-    $chave = array_search($url, $this->rotas);
+    $raiz = str_replace('index.php', '', $_SERVER['PHP_SELF']);
+    $url  = str_replace($raiz,       '', $_SERVER['REQUEST_URI']);
 
-    if($chave === false) {
+    echo '$url gerada pelo rotear() : "' . $url . '"<br>';
+
+    if (isset($rotas[$url])) {
+      $arquivoHtml = "./html/".$rotas[$url].".php";
+    }
+    else {
       $arquivoHtml = "./html/erro.php";
-      return $arquivoHtml;
     }
-    else{
-      $arquivoHtml = "./html/" . $this->acoes[$chave] . ".php";
-      return $arquivoHtml;
-    }
+
+    return $arquivoHtml;
   }
 }
-
 ?>
