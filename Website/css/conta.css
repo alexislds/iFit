@@ -1,0 +1,175 @@
+/* Variaveis */
+/* Mixins */
+/* Media Querys */
+.login,
+.cadastro {
+  z-index: 2;
+  -webkit-transition: opacity 1000ms ,-webkit-transform 500ms;
+  transition: opacity 1000ms ,-webkit-transform 500ms;
+  transition: transform 500ms ,opacity 1000ms;
+  transition: transform 500ms ,opacity 1000ms ,-webkit-transform 500ms;
+  background: #fefefe;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login::before,
+.cadastro::before {
+  background: #fefefe;
+  border-radius: 50%;
+  content: '';
+  height: 70px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: calc(100% - (70px/2));
+  width: 70px;
+}
+
+.login-limite,
+.cadastro-limite {
+  height: 100vh;
+  overflow: visible;
+}
+
+.login-titulo,
+.cadastro-titulo {
+  background: #6E2B77;
+  color: #fefefe;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 20px;
+  width: 100%;
+}
+
+.login-input,
+.cadastro-input {
+  border: 1px solid #ededed;
+  border-radius: 3px;
+  color: #ccc;
+  font-family: "Lato", sans-serif;
+  padding: 10px 10px 10px 10px;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  width: calc(100% - 40px);
+}
+
+.login-input:focus,
+.cadastro-input:focus {
+  color: #6E2B77;
+  border: 1px solid #6E2B77;
+}
+
+.login-input::-webkit-input-placeholder,
+.cadastro-input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.login-input:-ms-input-placeholder,
+.cadastro-input:-ms-input-placeholder {
+  color: #ccc;
+}
+
+.login-input::placeholder,
+.cadastro-input::placeholder {
+  color: #ccc;
+}
+
+.login-input:focus::-webkit-input-placeholder,
+.cadastro-input:focus::-webkit-input-placeholder {
+  color: #6E2B77;
+}
+
+.login-input:focus:-ms-input-placeholder,
+.cadastro-input:focus:-ms-input-placeholder {
+  color: #6E2B77;
+}
+
+.login-input:focus::placeholder,
+.cadastro-input:focus::placeholder {
+  color: #6E2B77;
+}
+
+.login-texto,
+.cadastro-texto {
+  color: #ccc;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+.login-texto:hover,
+.cadastro-texto:hover {
+  color: #6E2B77;
+}
+
+.login-email,
+.cadastro-email {
+  background: url(../img/login-email.png) no-repeat 10px center;
+  padding: 10px 10px 10px 40px;
+}
+
+.login-email:focus,
+.cadastro-email:focus {
+  background: url(../img/login-email-focus.png) no-repeat 10px center;
+}
+
+.login-senha,
+.cadastro-senha {
+  background: url(../img/login-senha.png) no-repeat 15px center;
+  padding: 10px 10px 10px 40px;
+}
+
+.login-senha:focus,
+.cadastro-senha:focus {
+  background: url(../img/login-senha-focus.png) no-repeat 15px center;
+}
+
+.login-botao,
+.cadastro-botao {
+  background: #fefefe url(../img/login-botao-desativado.png) no-repeat center;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  height: 56px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  width: 56px;
+}
+
+.login-botao:hover,
+.cadastro-botao:hover {
+  background: #fefefe url(../img/login-botao.png) no-repeat center;
+  border: 1px solid #6E2B77;
+}
+
+.cadastro {
+  width: 500px;
+  height: 570px;
+  margin: -285px 0px 0px -250px;
+}
+
+.login {
+  height: 300px;
+  width: 350px;
+  margin: -150px 0px 0px -175px;
+}

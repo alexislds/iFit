@@ -2,10 +2,10 @@
 
 .login,
 .cadastro{
-   z-index: 2; 
-   transition: transform 500ms ,opacity 1000ms;    
+   z-index: 2;
+   transition: transform 500ms ,opacity 1000ms;
    background:$branco; border-bottom-left-radius:5px; border-bottom-right-radius:5px;   font-family:$fonteA; position:absolute; top: 50%; left:50%; display: flex; justify-content: space-between; align-items: center; flex-direction: column;
-      
+
 
   &::before{background:$branco; border-radius:50%; content:''; height:70px; left:50%; position:absolute; transform:translateX(-50%); top:calc(100% - (70px/2)); width:70px;}
 
