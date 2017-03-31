@@ -1,6 +1,7 @@
 <?php
 $rotas = array(
-  ''     => 'home',
+  ''      => 'home',
+  '/conta/*' => 'conta',
   'conta' => 'conta',
 );
 ?>

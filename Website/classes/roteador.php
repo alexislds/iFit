@@ -1,11 +1,8 @@
 <?php
-Class Roteador {
+class Roteador {
 
-  public function rotear(){
+  public function rotear($url){
     include 'rotas.php';
-
-    $raiz = str_replace('index.php', '', $_SERVER['PHP_SELF']);
-    $url  = str_replace($raiz,       '', $_SERVER['REQUEST_URI']);
 
     echo '$url gerada pelo rotear() : "' . $url . '"<br>';
 
