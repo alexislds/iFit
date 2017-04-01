@@ -121,28 +121,6 @@
   color: #6E2B77;
 }
 
-.login-email,
-.cadastro-email {
-  background: url(../img/login-email.png) no-repeat 10px center;
-  padding: 10px 10px 10px 40px;
-}
-
-.login-email:focus,
-.cadastro-email:focus {
-  background: url(../img/login-email-focus.png) no-repeat 10px center;
-}
-
-.login-senha,
-.cadastro-senha {
-  background: url(../img/login-senha.png) no-repeat 15px center;
-  padding: 10px 10px 10px 40px;
-}
-
-.login-senha:focus,
-.cadastro-senha:focus {
-  background: url(../img/login-senha-focus.png) no-repeat 15px center;
-}
-
 .login-botao,
 .cadastro-botao {
   background: #fefefe url(../img/login-botao-desativado.png) no-repeat center;
@@ -172,4 +150,22 @@
   height: 300px;
   width: 350px;
   margin: -150px 0px 0px -175px;
+}
+
+.login-email {
+  background: url(../img/login-email.png) no-repeat 10px center;
+  padding: 10px 10px 10px 40px;
+}
+
+.login-email:focus {
+  background: url(../img/login-email-focus.png) no-repeat 10px center;
+}
+
+.login-senha {
+  background: url(../img/login-senha.png) no-repeat 15px center;
+  padding: 10px 10px 10px 40px;
+}
+
+.login-senha:focus {
+  background: url(../img/login-senha-focus.png) no-repeat 15px center;
 }
