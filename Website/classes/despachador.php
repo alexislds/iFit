@@ -9,10 +9,7 @@ class Despachador {
     $roteador    = new Roteador();
     $arquivoHtml = $roteador->rotear($url);
 
-    // faz chamada do controlador
-    
-    // visao
-    include 'layout.ctp';
+    include './html/layout.php';
   }
 }
 ?>
