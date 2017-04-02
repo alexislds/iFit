@@ -22,10 +22,14 @@
   &-botao:hover{background:$branco url(../img/login-botao.png) no-repeat center; border:1px solid #6E2B77;}
 }
 
-.cadastro{
+.cadastro{ 
   width:500px; height: 570px; margin: -285px 0px 0px -250px;
+    
+    &-opcoes{width:calc(100% - 40px); display: flex;  justify-content: space-around;}
+    &-opcoes-aluno,&-opcoes-professor{text-align: center; }
+    &-opcoes-texto{color: #6E2B77; margin-top: 5px;}
 }
-
+ 
 .login{
   height:300px; width:350px; margin: -150px 0px 0px -175px;
 
