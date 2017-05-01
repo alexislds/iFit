@@ -61,5 +61,15 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AcessoDb Conectar = new AcessoDb();
+            String status = Conectar.OpenConnetion();
+            MessageBox.Show(status);
+            status = Conectar.closeConnetion();
+            MessageBox.Show(status);
+
+        }
     }
 }
