@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApplication1
 {
@@ -64,12 +65,20 @@ namespace WindowsFormsApplication1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AcessoDb Conectar = new AcessoDb();
-            String status = Conectar.OpenConnetion();
+            AcessoDb acDb= new AcessoDb();
+            MySqlConnection con = new MySqlConnection();
+            con = acDb.OpenConnetion();
+            FitDao fit = new FitDao(con);
+            Aluno al = new Aluno();
+            al.setNome("lorena");
+            al.setNomeAcademia("falcon");
+            al.setIdade("20");
+            al.setSexo("m");
+            al.setEmail("nobru");
+            al.setSenha("llllll");
+            string status =  fit.inserir(al);
             MessageBox.Show(status);
-            status = Conectar.closeConnetion();
-            MessageBox.Show(status);
-
+               
         }
     }
 }

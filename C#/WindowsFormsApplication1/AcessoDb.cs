@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
         private static string confi = "  Server=mysql4.gear.host;Database=ifit;Uid=ifit;Pwd=123japones*";    
         private MySqlConnection connection = new MySqlConnection(confi);
         string status;
-        public string OpenConnetion() {
+        public  MySqlConnection OpenConnetion() {
             
             try
             {
@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
                 status = "Banco não foi conectado";
 
             }
-            return status;
+            return connection;
         }
         public string closeConnetion() {
             try

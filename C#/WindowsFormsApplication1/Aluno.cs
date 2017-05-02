@@ -48,7 +48,7 @@ namespace WindowsFormsApplication1
         public void setEmail(string email) {
             this.email = email;
         }
-        public string getEmail(string email) {
+        public string getEmail() {
             return this.email;
         }
         public void setSenha(string senha) {
