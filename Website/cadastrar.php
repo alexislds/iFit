@@ -1,37 +1,33 @@
-
 <?php
  include './classes/db.php';
+ $db = new Db();
+ $banco = $db->retornaDb();
 
- $cadastroTipo = "'".$_POST['cadastroTipo']."'";
- $cadastroNome = "'".$_POST['cadastroNome']."'";
- $cadastroAcademia = "'".$_POST['cadastroAcademia']."'";
- $cadastroIdade = $_POST['cadastroIdade'];
- $cadastroSexo = "'".$_POST['cadastroSexo']."'";
- $cadastroEmail = "'".$_POST['cadastroEmail']."'";
- $cadastroSenha = "'".$_POST['cadastroSenha']."'";
+ $cadastroTipo     = "'" . $_POST['cadastroTipo'] . "'";
+ $cadastroNome     = "'" . $_POST['cadastroNome'] . "'";
+ $cadastroAcademia = "'" . $_POST['cadastroAcademia'] . "'";
+ $cadastroIdade    = $_POST['cadastroIdade'];
+ $cadastroSexo     = "'" . $_POST['cadastroSexo'] . "'";
+ $cadastroEmail    = "'" . $_POST['cadastroEmail'] . "'";
+ $cadastroSenha    = "'" . $_POST['cadastroSenha'] . "'";
 
+ echo '$cadastroTipo = ' . $cadastroTipo . "<br>";
+ echo '$cadastroNome = ' . $cadastroNome . "<br>";
+ echo '$cadastroAcademia = ' . $cadastroAcademia . "<br>";
+ echo '$cadastroIdade = ' . $cadastroIdade . "<br>";
+ echo '$cadastroSexo = ' . $cadastroSexo . "<br>";
+ echo '$cadastroEmail = ' . $cadastroEmail . "<br>";
+ echo '$cadastroSenha = ' . $cadastroSenha . "<br>";
 
-echo $cadastroTipo."<br>";
-echo $cadastroNome."<br>";
-echo $cadastroAcademia."<br>";
-echo $cadastroIdade."<br>";
-echo $cadastroSexo."<br>";
-echo $cadastroEmail."<br>";
-echo $cadastroSenha."<br>";
-
- 
-    if($cadastroTipo == "'Aluno'"){
-        $tipoTabela = "`".'alunos'."`";
-        echo 1;
+    if($cadastroTipo == 'Aluno'){
+        $tipoTabela = "`" . 'alunos' . "`";
     }
     elseif($cadastroTipo == "'Professor'"){
-        $tipoTabela = "`".'professores'."`";
-        echo 2;
+        $tipoTabela = "`" . 'professores' . "`";
     }
 
     if(isset($tipoTabela)){
-        $consulta = "INSERT INTO $tipoTabela (Nome,Nome_Academia,Idade,Sexo,Email,Senha) VALUES ($cadastroNome,$cadastroAcademia,$cadastroIdade,$cadastroSexo,$cadastroEmail,$cadastroSenha); ";
-        $db->query("$consulta");
-        echo 3;
+        $consulta = "INSERT INTO $tipoTabela (Nome, Nome_Academia, Idade, Sexo, Email, Senha) VALUES ($cadastroNome, $cadastroAcademia, $cadastroIdade, $cadastroSexo, $cadastroEmail, $cadastroSenha);";
+        $banco->query("$consulta");
     }
 ?>
