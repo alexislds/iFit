@@ -559,27 +559,53 @@ body {
 }
 
 .perfil-lista {
-  margin-top: 40px;
+  margin: 40px auto 0;
   width: 60%;
 }
 
-.perfil-lista-botao {
+.perfil-lista-input {
   background: white;
+  color: black;
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   height: 40px;
   width: 100%;
+  text-align: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
 }
 
-.perfil-lista-botao:not(:first-of-type) {
-  margin-top: 20px;
+.perfil-lista-input:not(:first-of-type) {
+  margin-top: 40px;
 }
 
-.perfil-lista-link {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  line-height: 40px;
+.perfil-lista-botoes {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.perfil-lista-editar, .perfil-lista-salvar {
+  padding: 4px 15px 7px;
+  border-radius: 3px;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.perfil-lista-editar {
+  background-color: #33b5e5;
+}
+
+.perfil-lista-salvar {
+  background-color: #00C851;
+  margin-left: 20px;
+}
+
+.perfil-lista-editar:hover {
+  background-color: #1a9bcb;
+}
+
+.perfil-lista-salvar:hover {
+  background-color: #00953c;
 }
 
 .fichas {
