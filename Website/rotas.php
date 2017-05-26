@@ -2,6 +2,7 @@
   $rotas = array(
     ''      => 'home',
     'conta' => 'conta',
-    'menu'  => 'menu'  
+    'menu'  => 'menu',
+    'perfil' => 'perfil',
   );
 ?>

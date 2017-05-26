@@ -533,3 +533,49 @@ body {
 .menu-lista-botao:hover {
   background-color: #6E2B77;
 }
+
+.perfil {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.perfil-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+}
+
+.perfil-lista {
+  margin-top: 40px;
+  width: 60%;
+}
+
+.perfil-lista-botao {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 100%;
+}
+
+.perfil-lista-botao:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.perfil-lista-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
