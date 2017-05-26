@@ -4,7 +4,7 @@
   </div>
   <ul class="navegacao-menu">
     <li class="navegacao-menu-item navegacao-menu-item-conta">
-      <a href="./html/conta.php" class="navegacao-menu-link">Conta</a>
+      <a href="./conta" class="navegacao-menu-link">Conta</a>
     </li>
     <li class="navegacao-menu-item navegacao-menu-item-sobre">
       <a href="#" class="navegacao-menu-link">Sobre</a>
@@ -15,3 +15,4 @@
   </ul>
   <div class="navegacao-botao" type="button"></div>
 </nav>
+ 

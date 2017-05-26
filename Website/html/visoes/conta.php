@@ -1,4 +1,4 @@
-<section class="login-limite limite">
+<section class="login-limite">
  <form action="logar.php" method="post">
      <div class="login">
         <h1 class="login-titulo">Login</h1>

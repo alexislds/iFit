@@ -10,7 +10,7 @@
 </head>
 <body>
   <?php include './html/componentes/navegacao.php'; ?>
-  <main class="main">
+  <main class="main limite">
     <?php include $arquivoHtml; ?>
   </main>
   <?php include './html/componentes/javascript.php'; ?>
