@@ -4,7 +4,8 @@
     'conta' => 'conta',
     'menu'  => 'menu',
     'perfil' => 'perfil',
-    'fichas' => 'fichas',  
+    'fichas' => 'fichas',
+    'especificacoes' => 'especificacoes'
   );
 ?>
  

@@ -1,0 +1,25 @@
+.especificacoes{
+	align-items:center; background:rgba(red, .2); display:flex; flex-direction:column; height:100%; padding:20px 0; width:100%;
+	
+	&-titulo{
+		font-family:$fonteB; font-size:24px;
+	}
+
+	&-lista{
+		margin:40px auto 0; width:60%;
+
+		&-input{background:white; color:black; border-radius: 5px; box-shadow:0 0 20px 0 rgba(0,0,0,.3); height:40px; width:100%; text-align:center; transition:all 300ms;}
+		&-input:not(:first-of-type){margin-top:40px;}
+
+		&-botoes{margin-top:40px; text-align:right;}
+
+		&-editar,
+		&-salvar{padding:4px 15px 7px; border-radius:3px; color:white; font-family:$fonteA;}
+
+		&-editar{background-color:#33b5e5;}
+		&-salvar{background-color:#00C851; margin-left:20px;}
+
+		&-editar:hover{background-color:darken(#33b5e5, 10%);}
+		&-salvar:hover{background-color:darken(#00C851, 10%);}
+	}
+}
