@@ -480,11 +480,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .menu-titulo {
   padding-bottom: 11px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
 }
 
 .menu-foto {
@@ -493,4 +495,41 @@ body {
   border-radius: 50%;
   margin: 0 auto;
   display: block;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.menu-lista {
+  width: 60%;
+}
+
+.menu-lista-botao {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+}
+
+.menu-lista-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+
+.menu-lista-link:hover {
+  color: white;
+}
+
+.menu-lista-botao:not(:last-of-type) {
+  margin-bottom: 59px;
+}
+
+.menu-lista-botao:hover {
+  background-color: #6E2B77;
 }

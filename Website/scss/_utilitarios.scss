@@ -3,7 +3,7 @@
 
 $fonteA:'Lato', sans-serif;
 $fonteB:'Ubuntu', sans-serif;
-$corA: #ffffff;
+$corA: #6E2B77;
 $corB: #ffffff;
 $corC: #ffffff;
 $corD: #ffffff;
@@ -19,7 +19,7 @@ $monitor-width:1920px;
 /* Mixins */
 
 @mixin mascara {
-  display:inline-block; height:100%; left:0; position:absolute; top:0; width:100%;
+  display:inline-block; height:100%; width:100%;
 }
 
 
