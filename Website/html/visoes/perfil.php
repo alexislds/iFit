@@ -1,17 +1,9 @@
 <section class="perfil">
 	<h1 class="perfil-titulo">Perfil</h1>
-	<form action="#" method="post">
-		<div class="perfil-lista">
-			<input class="perfil-lista-input" type="text" placeholder="teste">
-			<input class="perfil-lista-input" type="text" placeholder="teste">
-			<input class="perfil-lista-input" type="text" placeholder="teste">
-			<input class="perfil-lista-input" type="text" placeholder="teste">
-			<input class="perfil-lista-input" type="text" placeholder="teste">
-			<input class="perfil-lista-input" type="text" placeholder="teste">
-			<div class="perfil-lista-botoes">
-				<button class="perfil-lista-editar" type="button">Editar</button>
-				<button class="perfil-lista-salvar" type="submit">Salvar</button>
-			</div>
-		</div>
-	</form>
+	<div class="perfil-lista">
+		<button class="perfil-lista-botao"><a href="" class="perfil-lista-link">1</a></button>
+		<button class="perfil-lista-botao"><a href="" class="perfil-lista-link">2</a></button>
+		<button class="perfil-lista-botao"><a href="" class="perfil-lista-link">3</a></button>
+		<button class="perfil-lista-botao"><a href="" class="perfil-lista-link">4</a></button>
+	</div>
 </section>
