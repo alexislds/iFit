@@ -575,11 +575,11 @@ body {
 }
 
 .perfil-lista-input:not(:first-of-type) {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .perfil-lista-botoes {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: right;
 }
 
@@ -713,11 +713,11 @@ body {
 }
 
 .especificacoes-lista-input:not(:first-of-type) {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .especificacoes-lista-botoes {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: right;
 }
 
@@ -743,4 +743,191 @@ body {
 
 .especificacoes-lista-salvar:hover {
   background-color: #00953c;
+}
+
+.alunos {
+  background: rgba(255, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+
+.alunos-titulo {
+  padding-bottom: 11px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.alunos-lista {
+  width: 60%;
+  margin-top: 40px;
+}
+
+.alunos-lista-botao {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  position: relative;
+}
+
+.alunos-lista-botao:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.alunos-lista-botao:hover {
+  background-color: #6E2B77;
+}
+
+.alunos-lista-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+
+.alunos-lista-link:hover {
+  color: white;
+}
+
+.solicita-ficha {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.solicita-ficha-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+}
+
+.solicita-ficha-form {
+  width: 100%;
+}
+
+.solicita-ficha-lista {
+  margin: 40px auto 0;
+  width: 60%;
+}
+
+.solicita-ficha-lista-input {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.solicita-ficha-lista-input:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.solicita-ficha-lista-botoes {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.solicita-ficha-lista-enviar {
+  background-color: #00C851;
+  margin-left: 20px;
+  padding: 4px 15px 7px;
+  border-radius: 3px;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.solicita-ficha-lista-enviar:hover {
+  background-color: #00953c;
+}
+
+.solicitacoes-ficha {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+
+.solicitacoes-ficha-titulo {
+  padding-bottom: 11px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.solicitacoes-ficha-lista {
+  width: 60%;
+  margin-top: 40px;
+}
+
+.solicitacoes-ficha-lista-botao {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  position: relative;
+}
+
+.solicitacoes-ficha-lista-botao:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.solicitacoes-ficha-lista-botao:hover {
+  background-color: #6E2B77;
+}
+
+.solicitacoes-ficha-lista-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+
+.solicitacoes-ficha-lista-link:hover {
+  color: white;
 }
