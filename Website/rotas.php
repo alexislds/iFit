@@ -8,7 +8,8 @@
     'especificacoes' => 'especificacoes',
     'alunos' => 'alunos',
     'solicitar-ficha' => 'solicitar-ficha',
-    'solicitacoes-ficha' => 'solicitacoes-ficha',
-    'aluno' => 'aluno',  
+    'solicitacoes-fichas' => 'solicitacoes-fichas',
+    'aluno' => 'aluno',
+    'solicitacao-ficha' => 'solicitacao-ficha'
   );
 ?>

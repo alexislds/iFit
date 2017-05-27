@@ -1,5 +1,5 @@
 <section class="solicitacoes-ficha">
-   <h1 class="solicitacoes-ficha-titulo">Solicitações de Ficha</h1>
+   <h1 class="solicitacoes-ficha-titulo">Solicitações de Fichas</h1>
    <div class="solicitacoes-ficha-lista">
       <button class="solicitacoes-ficha-lista-botao" type="button">
           <a class="solicitacoes-ficha-lista-link" href="#">Ficha de treino</a>
