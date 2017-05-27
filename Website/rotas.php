@@ -5,7 +5,9 @@
     'menu'  => 'menu',
     'perfil' => 'perfil',
     'fichas' => 'fichas',
-    'especificacoes' => 'especificacoes'
+    'especificacoes' => 'especificacoes',
+    'alunos' => 'alunos'  
   );
 ?>
+ 
  
