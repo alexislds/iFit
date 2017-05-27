@@ -6,8 +6,8 @@
     'perfil' => 'perfil',
     'fichas' => 'fichas',
     'especificacoes' => 'especificacoes',
-    'alunos' => 'alunos'  
+    'alunos' => 'alunos',
+    'solicitar-ficha' => 'solicitar-ficha',
+    'solicitacoes-ficha' => 'solicitacoes-ficha'
   );
 ?>
- 
- 
