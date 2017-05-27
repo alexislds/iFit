@@ -7,8 +7,7 @@
     'fichas' => 'fichas',
     'especificacoes' => 'especificacoes',
     'alunos' => 'alunos',
-    'solicitar/ficha' => 'solicitar-ficha'
+    'solicitar-ficha' => 'solicitar-ficha',
+    'solicitacoes-ficha' => 'solicitacoes-ficha'
   );
 ?>
- 
- 
