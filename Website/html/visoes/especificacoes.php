@@ -1,6 +1,6 @@
 <section class="especificacoes">
 	<h1 class="especificacoes-titulo">Especificacoes</h1>
-	<form action="#" method="post">
+	<form action="#" method="post" class="especificacoes-form">
 		<div class="especificacoes-lista">
 			<input class="especificacoes-lista-input" type="text" placeholder="teste">
 			<input class="especificacoes-lista-input" type="text" placeholder="teste">

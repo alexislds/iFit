@@ -1,6 +1,6 @@
 <section class="perfil">
 	<h1 class="perfil-titulo">Perfil</h1>
-	<form action="#" method="post">
+	<form action="#" method="post" class="perfil-form">
 		<div class="perfil-lista">
 			<input class="perfil-lista-input" type="text" placeholder="teste">
 			<input class="perfil-lista-input" type="text" placeholder="teste">
