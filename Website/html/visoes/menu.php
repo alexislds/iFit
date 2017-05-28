@@ -7,4 +7,4 @@
         <button class="menu-lista-botao"><a class="menu-lista-link" href="#">Verificar lista de solicitantes de fichas de treino</a></button>
         <button class="menu-lista-botao"><a class="menu-lista-link" a href="#">Convidar Alunos</a></button>
     </div>
-</section>  
+</section>

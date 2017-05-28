@@ -6,9 +6,9 @@
     align-items: center;
     padding: 20px 0px;
     &-titulo {
-       padding-bottom: 11px;
-       font-family: "Ubuntu", sans-serif;
-       font-size: 20px;
+        padding-bottom: 11px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
     }
     &-lista {
         width: 60%;
@@ -25,20 +25,19 @@
             font-family: $fonteA;
             transition: all 200ms;
             position: relative;
-        } 
+        }
         &-botao:not(:first-of-type) {
             margin-top: 30px;
         }
-        
         &-botao:hover {
-           background-color: $corA;
+            background-color: $corA;
         }
-        &-link{
-            @include mascara; 
-            line-height: 40px; 
+        &-link {
+            @include mascara;
+            line-height: 40px;
         }
-        &-link:hover{
-           color: white;
+        &-link:hover {
+            color: white;
         }
     }
 }

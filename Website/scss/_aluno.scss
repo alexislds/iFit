@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 20px 0px;
-    &-titulo{
+    &-titulo {
         width: 100%;
         text-align: center;
         font-family: $fonteB;
@@ -18,7 +18,7 @@
         margin-top: 40px;
         &-titulo {
             font-family: $fonteB;
-            font-size: 20px; 
+            font-size: 20px;
         }
         &-form {
             width: 100%;
@@ -73,7 +73,7 @@
         align-items: center;
         padding: 20px 0px;
         margin-top: 40px;
-        &-titulo { 
+        &-titulo {
             font-family: "Ubuntu", sans-serif;
             font-size: 20px;
         }

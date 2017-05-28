@@ -10,7 +10,7 @@
         font-family: $fonteB;
         font-size: 20px;
     }
-    &-foto { 
+    &-foto {
         width: 100px;
         height: 100px;
         border-radius: 50%;
@@ -33,12 +33,12 @@
             font-family: $fonteA;
             transition: all 200ms;
         }
-        &-link{
+        &-link {
             @include mascara;
-            line-height: 40px; 
+            line-height: 40px;
         }
-        &-link:hover{
-           color: white;
+        &-link:hover {
+            color: white;
         }
         &-botao:not(:last-of-type) {
             margin-bottom: 40px;
