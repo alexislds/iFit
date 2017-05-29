@@ -1,5 +1,5 @@
 <?php
-  $rotas = array(
+  $rotas = [
     ''      => 'home',
     'conta' => 'conta',
     'menu'  => 'menu',
@@ -10,6 +10,7 @@
     'solicitar-ficha' => 'solicitar-ficha',
     'solicitacoes-fichas' => 'solicitacoes-fichas',
     'aluno' => 'aluno',
-    'solicitacao-ficha' => 'solicitacao-ficha'
-  );
+    'solicitacao-ficha' => 'solicitacao-ficha',
+    'ficha' => 'ficha',
+  ];
 ?>

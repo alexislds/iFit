@@ -1,0 +1,94 @@
+.ficha {
+	padding:40px 0px;
+    &-titulo {
+        text-align: center;
+        font-family: $fonteB;
+        font-size: 24px;
+    } 
+    &-conteudo {
+        width: 100%;
+        &-cima {
+        	margin-top: 40px;
+            &-campo {
+                width: 100%;
+                text-align: center;
+                border: 1px solid #ccc;
+                padding: 2px 5px;
+                margin-bottom: 5px;
+            }
+            &-data {
+                width: 20%;
+                margin-bottom: 0px;
+            }
+        }
+        &-baixo { 
+            margin-top: 60px;
+  
+            &-treino{
+            	margin-top: 20px; 
+            	&-tabela{
+
+                 		border: 1px solid black;
+                 		width: 100%;
+
+                 		tr,td,th{
+                 			border: 1px solid black;
+                 		}
+                 	}
+                 &-titulos,&-dado{
+                 	padding: 5px 5px;
+                 	text-align: center;
+                 }
+            }
+
+            &-dias {
+                display: flex;
+                justify-content: space-around;
+            }
+            &-dia {
+                display: inline-block;
+                label,
+                input {
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+
+
+       
+        }
+    }
+
+    &-botoes {
+            margin-top: 30px;
+            text-align: right;
+             &-editar,
+             &-salvar {
+	            padding: 4px 15px 7px;
+	            border-radius: 3px;
+	            color: white;
+	            font-family: $fonteA;
+              }
+            &-editar {
+               background-color: #33b5e5;
+            }
+            &-salvar {
+            	background-color: #00C851;
+            	margin-left: 20px;
+            }
+        
+           &-editar:hover {
+            background-color: darken(#33b5e5, 10%);
+            }
+           &-salvar:hover {
+          background-color: darken(#00C851, 10%);
+           }
+ }
+}
+        
+         
+       
+       
+       
+        
+       
