@@ -19,6 +19,9 @@ namespace WindowsFormsApplication1
         public string getId() {
             return this.id;
         }
+        public void setId(string id){
+            this.id = id;
+        }
         public void setNome(string nome) {
             this.nome = nome;
 

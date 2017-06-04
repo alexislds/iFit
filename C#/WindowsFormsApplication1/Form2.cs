@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApplication1
 {
@@ -19,16 +20,42 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int a=10, b=9, c=7;
-            double delta, a1, a2;
-            delta = (b * b) - (4 * a * b);
+            AcessoDb acDb = new AcessoDb();
+            MySqlConnection con = new MySqlConnection();
+            con = acDb.OpenConnetion();
+            FitDao fit = new FitDao(con);
+            List<Aluno> listaUsuario = new List<Aluno>();
+            listaUsuario = fit.litarUsuario();
+            DataTable tb = new DataTable();
 
-            a1 = (-b + Math.Sqrt(delta) / (2*a));
+
+           
+            if (listaUsuario != null) {
+                for (int i = 0; i < listaUsuario.Count; i++)
+                {
+                    dgListarUsuario.Rows.Add(listaUsuario[i].getId(), listaUsuario[i].getNome(), listaUsuario[i].getSexo(),listaUsuario[i].getNomeAcademia());
+                }
+
+            }
+            else {
+                MessageBox.Show("Não há dados");
+            }
+
+        }
+
+        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             
-            string aux = Convert.ToString(a1);
-
-            MessageBox.Show("aux :" +aux ,"Resultado A1");
-
         }
     }
 }
