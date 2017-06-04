@@ -70,6 +70,38 @@ namespace WindowsFormsApplication1
             return todosAlunos;
 
         }
+        public bool logar(Aluno  aluno) {
+            Aluno user = new Aluno();
+            user = aluno;
+            string comandoSelect = "SELECT senha , nome FROM usuario where senha = '"+user.getSenha()+"' AND  nome ='"+user.getNome()+"'" ;
+            try
+            {
+                MySqlCommand comandos = new MySqlCommand(comandoSelect, con);
+                comandos.ExecuteNonQuery();
+                MySqlDataReader leitor = comandos.ExecuteReader();
+                if (leitor != null)
+                {
+                    while (leitor.Read())
+                    {
+                        if ((user.getSenha().Equals(leitor.GetString(0)) && user.getNome().Equals(leitor.GetString(1)))){
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+
+            
+
+        }
 
 
     }

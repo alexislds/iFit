@@ -41,12 +41,17 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nome = txtNome.Text;
-            string senha = txtSenha.Text;
+            Aluno user = new Aluno();
+            AcessoDb acDb = new AcessoDb();
+            MySqlConnection con = new MySqlConnection();
+            con = acDb.OpenConnetion();
+            FitDao fit = new FitDao(con);
+            user.setNome(txtNome.Text)  ;
+            user.setSenha(txtSenha.Text);
             bool acesso;
 
-            
-            acesso = login(nome, senha);
+
+            acesso = fit.logar(user);
             Form2 telaAcesso = new Form2();
             if (acesso == true)
             {
@@ -54,6 +59,9 @@ namespace WindowsFormsApplication1
                 t.Start();
                 this.Close();
 
+            }
+            else {
+                MessageBox.Show("Usuario ou senha errada","Acesso negado");
             }
            
          }
