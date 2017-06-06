@@ -68,6 +68,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(134, 20);
             this.txtSenha.TabIndex = 3;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // lblSenha
             // 
