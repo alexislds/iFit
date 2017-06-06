@@ -63,8 +63,13 @@ a {
 /* Mixins */
 /* Media Querys */
 /* TAGS */
+html {
+  height: 100%;
+}
+
 body {
   position: relative;
+  height: 100%;
 }
 
 .main {
@@ -91,7 +96,6 @@ body {
 /* DIV LIMITE */
 @media (max-width: 640px) {
   .limite {
-    height: 100%;
     overflow: hidden;
     padding: 20px;
     width: 100%;
@@ -101,7 +105,6 @@ body {
 
 @media (min-width: 641px) and (max-width: 1024px) {
   .limite {
-    height: 100%;
     overflow: hidden;
     padding: 40px;
     position: relative;
@@ -110,7 +113,6 @@ body {
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .limite {
-    height: 100%;
     margin: 0 auto;
     max-width: 1000px;
     overflow: hidden;
@@ -121,7 +123,6 @@ body {
 
 @media (min-width: 1441px) and (max-width: 1920px) {
   .limite {
-    height: 100%;
     margin: 0 auto;
     max-width: 1400px;
     overflow: hidden;
@@ -132,7 +133,6 @@ body {
 
 @media (min-width: 1921px) {
   .limite {
-    height: 100%;
     margin: 0 auto;
     max-width: 1600px;
     overflow: hidden;
@@ -459,4 +459,733 @@ body {
 
 .login-senha:focus {
   background: url(../img/login-senha-focus.png) no-repeat 15px center;
+}
+
+.menu {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+
+.menu-titulo {
+  padding-bottom: 11px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.menu-foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.menu-lista {
+  width: 60%;
+}
+
+.menu-lista-botao {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.menu-lista-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+
+.menu-lista-link:hover {
+  color: white;
+}
+
+.menu-lista-botao:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+
+.menu-lista-botao:hover {
+  background-color: #6E2B77;
+}
+
+.perfil {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.perfil-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+}
+
+.perfil-form {
+  width: 100%;
+}
+
+.perfil-lista {
+  margin: 40px auto 0;
+  width: 60%;
+}
+
+.perfil-lista-input {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.perfil-lista-input:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.perfil-lista-botoes {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.perfil-lista-editar, .perfil-lista-salvar {
+  padding: 4px 15px 7px;
+  border-radius: 3px;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.perfil-lista-editar {
+  background-color: #33b5e5;
+}
+
+.perfil-lista-salvar {
+  background-color: #00C851;
+  margin-left: 20px;
+}
+
+.perfil-lista-editar:hover {
+  background-color: #1a9bcb;
+}
+
+.perfil-lista-salvar:hover {
+  background-color: #00953c;
+}
+
+.fichas {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+
+.fichas-titulo {
+  padding-bottom: 11px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.fichas-lista {
+  width: 60%;
+  margin-top: 40px;
+}
+
+.fichas-lista-botao {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  position: relative;
+}
+
+.fichas-lista-botao:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.fichas-lista-botao:hover {
+  background-color: #6E2B77;
+}
+
+.fichas-lista-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+
+.fichas-lista-link:hover {
+  color: white;
+}
+
+.especificacoes {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.especificacoes-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+}
+
+.especificacoes-form {
+  width: 100%;
+}
+
+.especificacoes-lista {
+  margin: 40px auto 0;
+  width: 60%;
+}
+
+.especificacoes-lista-input {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.especificacoes-lista-input:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.especificacoes-lista-botoes {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.especificacoes-lista-editar, .especificacoes-lista-salvar {
+  padding: 4px 15px 7px;
+  border-radius: 3px;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.especificacoes-lista-editar {
+  background-color: #33b5e5;
+}
+
+.especificacoes-lista-salvar {
+  background-color: #00C851;
+  margin-left: 20px;
+}
+
+.especificacoes-lista-editar:hover {
+  background-color: #1a9bcb;
+}
+
+.especificacoes-lista-salvar:hover {
+  background-color: #00953c;
+}
+
+.alunos {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+
+.alunos-titulo {
+  padding-bottom: 11px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.alunos-lista {
+  width: 90%;
+  margin-top: 40px;
+}
+
+.alunos-lista-botao {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  position: relative;
+}
+
+.alunos-lista-botao:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.alunos-lista-botao:hover {
+  background-color: #6E2B77;
+}
+
+.alunos-lista-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+
+.alunos-lista-link:hover {
+  color: white;
+}
+
+.solicita-ficha {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.solicita-ficha-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+}
+
+.solicita-ficha-form {
+  width: 100%;
+}
+
+.solicita-ficha-lista {
+  margin: 40px auto 0;
+  width: 60%;
+}
+
+.solicita-ficha-lista-input {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.solicita-ficha-lista-input:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.solicita-ficha-lista-botoes {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.solicita-ficha-lista-enviar {
+  background-color: #00C851;
+  margin-left: 20px;
+  padding: 4px 15px 7px;
+  border-radius: 3px;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.solicita-ficha-lista-enviar:hover {
+  background-color: #00953c;
+}
+
+.solicitacoes-ficha {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+
+.solicitacoes-ficha-titulo {
+  padding-bottom: 11px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.solicitacoes-ficha-lista {
+  width: 60%;
+  margin-top: 40px;
+}
+
+.solicitacoes-ficha-lista-botao {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  position: relative;
+}
+
+.solicitacoes-ficha-lista-botao:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.solicitacoes-ficha-lista-botao:hover {
+  background-color: #6E2B77;
+}
+
+.solicitacoes-ficha-lista-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+
+.solicitacoes-ficha-lista-link:hover {
+  color: white;
+}
+
+.aluno {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 0px;
+}
+
+.aluno-titulo {
+  width: 100%;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+}
+
+.aluno-especificacoes {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 20px 0;
+  width: 50%;
+  margin-top: 40px;
+}
+
+.aluno-especificacoes-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.aluno-especificacoes-form {
+  width: 100%;
+}
+
+.aluno-especificacoes-lista {
+  margin: 40px auto 0;
+  width: 90%;
+}
+
+.aluno-especificacoes-lista-input {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.aluno-especificacoes-lista-input:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.aluno-especificacoes-lista-botoes {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.aluno-especificacoes-lista-editar, .aluno-especificacoes-lista-salvar {
+  padding: 4px 15px 7px;
+  border-radius: 3px;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.aluno-especificacoes-lista-editar {
+  background-color: #33b5e5;
+}
+
+.aluno-especificacoes-lista-salvar {
+  background-color: #00C851;
+  margin-left: 20px;
+}
+
+.aluno-especificacoes-lista-editar:hover {
+  background-color: #1a9bcb;
+}
+
+.aluno-especificacoes-lista-salvar:hover {
+  background-color: #00953c;
+}
+
+.aluno-fichas {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+  margin-top: 40px;
+}
+
+.aluno-fichas-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.aluno-fichas-lista {
+  width: 90%;
+  margin-top: 40px;
+}
+
+.aluno-fichas-lista-botao {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  position: relative;
+}
+
+.aluno-fichas-lista-botao:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.aluno-fichas-lista-botao:hover {
+  background-color: #6E2B77;
+}
+
+.aluno-fichas-lista-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+
+.aluno-fichas-lista-link:hover {
+  color: white;
+}
+
+.solicitacao-ficha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.solicitacao-ficha-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+}
+
+.solicitacao-ficha-especificacoes {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 20px 0;
+  width: 50%;
+  margin-top: 40px;
+}
+
+.solicitacao-ficha-especificacoes-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.solicitacao-ficha-especificacoes-form {
+  width: 100%;
+}
+
+.solicitacao-ficha-especificacoes-lista {
+  margin: 40px auto 0;
+  width: 90%;
+}
+
+.solicitacao-ficha-especificacoes-lista-input {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.solicitacao-ficha-especificacoes-lista-input:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.solicitacao-ficha-dados {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 20px 0;
+  width: 50%;
+  margin-top: 40px;
+}
+
+.solicitacao-ficha-dados-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.solicitacao-ficha-dados-form {
+  width: 100%;
+}
+
+.solicitacao-ficha-dados-lista {
+  margin: 40px auto 0;
+  width: 90%;
+}
+
+.solicitacao-ficha-dados-lista-input {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.solicitacao-ficha-dados-lista-input:not(:first-of-type) {
+  margin-top: 30px;
 }
