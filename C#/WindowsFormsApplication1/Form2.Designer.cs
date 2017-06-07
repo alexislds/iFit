@@ -35,6 +35,7 @@
             this.cl_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,15 +95,27 @@
             this.dgListarUsuario.TabIndex = 1;
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(178, 369);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(125, 41);
+            this.btnCadastrar.TabIndex = 2;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 422);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.dgListarUsuario);
             this.Controls.Add(this.btnListar);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).EndInit();
             this.ResumeLayout(false);
 
@@ -116,5 +129,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_ID;
         private System.Windows.Forms.DataGridView dgListarUsuario;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

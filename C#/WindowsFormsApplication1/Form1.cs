@@ -21,11 +21,8 @@ namespace WindowsFormsApplication1
             if (nomes.Equals(nome) && senhas.Equals(senha))
             {
                 acesso = true;
-                MessageBox.Show("Acesso Permitido");
-
             }
             else {
-                MessageBox.Show("Acesso negado");
                 acesso = false;
             }
             return acesso;            
@@ -55,13 +52,14 @@ namespace WindowsFormsApplication1
             Form2 telaAcesso = new Form2();
             if (acesso == true)
             {
+                MessageBox.Show("logado","Login",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                 System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
                 t.Start();
                 this.Close();
 
             }
             else {
-                MessageBox.Show("Usuario ou senha errada","Acesso negado");
+                MessageBox.Show("Verificar usuario ou senha","Acesso negado",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
            
          }
@@ -73,19 +71,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AcessoDb acDb= new AcessoDb();
-            MySqlConnection con = new MySqlConnection();
-            con = acDb.OpenConnetion();
-            FitDao fit = new FitDao(con);
-            Aluno al = new Aluno();
-            al.setNome("lorena");
-            al.setNomeAcademia("falcon");
-            al.setIdade("20");
-            al.setSexo("m");
-            al.setEmail("nobru");
-            al.setSenha("llllll");
-            string status =  fit.inserir(al);
-            MessageBox.Show(status);
+           
                
         }
     }

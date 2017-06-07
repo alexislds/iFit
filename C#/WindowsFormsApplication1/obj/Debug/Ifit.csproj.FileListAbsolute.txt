@@ -10,3 +10,4 @@ C:\xampp\htdocs\Ifit\iFit\C#\WindowsFormsApplication1\obj\Debug\WindowsFormsAppl
 C:\xampp\htdocs\Ifit\iFit\C#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 C:\xampp\htdocs\Ifit\iFit\C#\WindowsFormsApplication1\bin\Debug\MySql.Data.dll
 C:\xampp\htdocs\Ifit\iFit\C#\WindowsFormsApplication1\bin\Debug\MySql.Data.xml
+C:\xampp\htdocs\Ifit\iFit\C#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Cadastro.resources
