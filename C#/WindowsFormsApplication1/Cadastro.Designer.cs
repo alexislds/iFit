@@ -30,7 +30,6 @@
         {
             this.btnSalvar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
-            this.txtIdade = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblIdade = new System.Windows.Forms.Label();
             this.txtSexo = new System.Windows.Forms.TextBox();
@@ -40,8 +39,15 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblErroAcademia = new System.Windows.Forms.Label();
+            this.lblErroSenha = new System.Windows.Forms.Label();
+            this.lblErroEmail = new System.Windows.Forms.Label();
+            this.lblerroSexo = new System.Windows.Forms.Label();
+            this.lblErroIdade = new System.Windows.Forms.Label();
+            this.lblErroNome = new System.Windows.Forms.Label();
             this.lblAcademia = new System.Windows.Forms.Label();
             this.txtAcademia = new System.Windows.Forms.TextBox();
+            this.txtIdade = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,14 +70,6 @@
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
             this.lblNome.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtIdade
-            // 
-            this.txtIdade.Location = new System.Drawing.Point(119, 67);
-            this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(180, 20);
-            this.txtIdade.TabIndex = 2;
-            this.txtIdade.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblEmail
             // 
@@ -151,12 +149,18 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtIdade);
+            this.panel1.Controls.Add(this.lblErroAcademia);
+            this.panel1.Controls.Add(this.lblErroSenha);
+            this.panel1.Controls.Add(this.lblErroEmail);
+            this.panel1.Controls.Add(this.lblerroSexo);
+            this.panel1.Controls.Add(this.lblErroIdade);
+            this.panel1.Controls.Add(this.lblErroNome);
             this.panel1.Controls.Add(this.lblAcademia);
             this.panel1.Controls.Add(this.txtAcademia);
             this.panel1.Controls.Add(this.txtNome);
             this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Controls.Add(this.lblSenha);
-            this.panel1.Controls.Add(this.txtIdade);
             this.panel1.Controls.Add(this.lblSexo);
             this.panel1.Controls.Add(this.txtSexo);
             this.panel1.Controls.Add(this.lblIdade);
@@ -169,6 +173,72 @@
             this.panel1.Size = new System.Drawing.Size(439, 292);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblErroAcademia
+            // 
+            this.lblErroAcademia.AutoSize = true;
+            this.lblErroAcademia.ForeColor = System.Drawing.Color.Red;
+            this.lblErroAcademia.Location = new System.Drawing.Point(315, 208);
+            this.lblErroAcademia.Name = "lblErroAcademia";
+            this.lblErroAcademia.Size = new System.Drawing.Size(99, 13);
+            this.lblErroAcademia.TabIndex = 18;
+            this.lblErroAcademia.Text = "informe a academia";
+            this.lblErroAcademia.Visible = false;
+            // 
+            // lblErroSenha
+            // 
+            this.lblErroSenha.AutoSize = true;
+            this.lblErroSenha.ForeColor = System.Drawing.Color.Red;
+            this.lblErroSenha.Location = new System.Drawing.Point(315, 176);
+            this.lblErroSenha.Name = "lblErroSenha";
+            this.lblErroSenha.Size = new System.Drawing.Size(75, 13);
+            this.lblErroSenha.TabIndex = 17;
+            this.lblErroSenha.Text = "senha inválida";
+            this.lblErroSenha.Visible = false;
+            // 
+            // lblErroEmail
+            // 
+            this.lblErroEmail.AutoSize = true;
+            this.lblErroEmail.ForeColor = System.Drawing.Color.Red;
+            this.lblErroEmail.Location = new System.Drawing.Point(315, 140);
+            this.lblErroEmail.Name = "lblErroEmail";
+            this.lblErroEmail.Size = new System.Drawing.Size(71, 13);
+            this.lblErroEmail.TabIndex = 16;
+            this.lblErroEmail.Text = "Email inválido";
+            this.lblErroEmail.Visible = false;
+            // 
+            // lblerroSexo
+            // 
+            this.lblerroSexo.AutoSize = true;
+            this.lblerroSexo.ForeColor = System.Drawing.Color.Red;
+            this.lblerroSexo.Location = new System.Drawing.Point(315, 103);
+            this.lblerroSexo.Name = "lblerroSexo";
+            this.lblerroSexo.Size = new System.Drawing.Size(86, 13);
+            this.lblerroSexo.TabIndex = 15;
+            this.lblerroSexo.Text = "preencha o sexo";
+            this.lblerroSexo.Visible = false;
+            // 
+            // lblErroIdade
+            // 
+            this.lblErroIdade.AutoSize = true;
+            this.lblErroIdade.ForeColor = System.Drawing.Color.Red;
+            this.lblErroIdade.Location = new System.Drawing.Point(315, 70);
+            this.lblErroIdade.Name = "lblErroIdade";
+            this.lblErroIdade.Size = new System.Drawing.Size(68, 13);
+            this.lblErroIdade.TabIndex = 14;
+            this.lblErroIdade.Text = "Idade Errada";
+            this.lblErroIdade.Visible = false;
+            // 
+            // lblErroNome
+            // 
+            this.lblErroNome.AutoSize = true;
+            this.lblErroNome.ForeColor = System.Drawing.Color.Red;
+            this.lblErroNome.Location = new System.Drawing.Point(315, 39);
+            this.lblErroNome.Name = "lblErroNome";
+            this.lblErroNome.Size = new System.Drawing.Size(118, 13);
+            this.lblErroNome.TabIndex = 13;
+            this.lblErroNome.Text = "Preencha corretamente";
+            this.lblErroNome.Visible = false;
             // 
             // lblAcademia
             // 
@@ -188,6 +258,14 @@
             this.txtAcademia.Size = new System.Drawing.Size(178, 20);
             this.txtAcademia.TabIndex = 11;
             // 
+            // txtIdade
+            // 
+            this.txtIdade.Location = new System.Drawing.Point(119, 67);
+            this.txtIdade.MaxLength = 1;
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.Size = new System.Drawing.Size(178, 20);
+            this.txtIdade.TabIndex = 19;
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,7 +284,6 @@
 
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblIdade;
         private System.Windows.Forms.TextBox txtSexo;
@@ -218,5 +295,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblAcademia;
         private System.Windows.Forms.TextBox txtAcademia;
+        private System.Windows.Forms.Label lblErroNome;
+        private System.Windows.Forms.Label lblErroAcademia;
+        private System.Windows.Forms.Label lblErroSenha;
+        private System.Windows.Forms.Label lblErroEmail;
+        private System.Windows.Forms.Label lblerroSexo;
+        private System.Windows.Forms.Label lblErroIdade;
+        private System.Windows.Forms.TextBox txtIdade;
     }
 }

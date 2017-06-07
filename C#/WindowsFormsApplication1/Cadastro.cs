@@ -26,12 +26,58 @@ namespace WindowsFormsApplication1
             txtSexo.Text = "";
         }
         public bool validaCampos() {
-            if (txtNome.Text.Equals("")) {
-
-                return false;
+            bool validador = true;
+            if (txtNome.Text.Equals(""))
+            {
+                lblErroNome.Visible = true;
+               // txtNome.Focus();
+                validador = false;
+            }
+            else {
+                lblErroNome.Visible = false;
+            }
+            if (txtAcademia.TextLength < 3)
+            {
+                lblErroAcademia.Visible = true;
+                validador = false;
+            }
+            else {
+                lblErroAcademia.Visible = false;
+            }
+            if (txtSexo.Text.Equals(""))
+            {
+                validador = false;
+                lblerroSexo.Visible = true;
+            }
+            else {
+                lblerroSexo.Visible = false;
             }
 
-            return true;
+            if (txtEmail.Text.Equals(""))
+            {
+                validador = false;
+                lblErroEmail.Visible = true;
+            }
+            else {
+                lblErroEmail.Visible = false;
+            }
+            if (txtSenha.Text.Equals(""))
+            {
+                validador = false;
+                lblErroSenha.Visible = true;
+            }
+            else {
+                lblErroSenha.Visible = false;
+            }
+            if (txtIdade.Text.Equals(""))
+            {
+                lblErroIdade.Visible = true;
+            }
+            else {
+                lblErroIdade.Visible = false;
+            }
+
+            return validador;
         }
 
         
@@ -48,9 +94,13 @@ namespace WindowsFormsApplication1
             al.setIdade(txtIdade.Text);
             al.setEmail(txtEmail.Text);
             al.setSenha(txtSenha.Text);
-            string status = fit.inserir(al);
-            MessageBox.Show(status, "Salvar",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            limpar();
+            al.setSexo(txtSexo.Text);
+            if (validaCampos()) {
+                string status = fit.inserir(al);
+                MessageBox.Show(status, "Salvar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                limpar();
+            }
+           
 
 
         }

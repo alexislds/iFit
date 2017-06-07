@@ -31,9 +31,11 @@ namespace WindowsFormsApplication1
 
            
             if (listaUsuario != null) {
+                dgListarUsuario.Rows.Clear();
                 for (int i = 0; i < listaUsuario.Count; i++)
                 {
-                    dgListarUsuario.Rows.Add(listaUsuario[i].getId(), listaUsuario[i].getNome(), listaUsuario[i].getSexo(),listaUsuario[i].getNomeAcademia());
+                    
+                    dgListarUsuario.Rows.Add(listaUsuario[i].getNome(), listaUsuario[i].getIdade(), listaUsuario[i].getSexo(),listaUsuario[i].getEmail(),listaUsuario[i].getNomeAcademia());
                 }
 
             }
@@ -67,6 +69,11 @@ namespace WindowsFormsApplication1
         {
             Cadastro cadastro = new Cadastro();
             cadastro.Show();
+        }
+
+        private void btnLimparLista_Click(object sender, EventArgs e)
+        {
+            dgListarUsuario.Rows.Clear();
         }
     }
 }
