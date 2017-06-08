@@ -1,19 +1,19 @@
 /* Variaveis */
 
-$fonteA:'Lato',
-sans-serif;
-$fonteB:'Ubuntu',
-sans-serif;
+$fonteA: "Lato", sans-serif;
+
+$fonteB: "Ubuntu", sans-serif;
+
 $corA: #6E2B77;
 $corB: #ffffff;
 $corC: #ffffff;
 $corD: #ffffff;
 $branco: #fefefe;
 $preto: #111111;
-$smartphone-width:640px;
-$tablet-width:1024px;
-$desktop-width:1440px;
-$monitor-width:1920px;
+$smartphone-width: 640px;
+$tablet-width: 1024px;
+$desktop-width: 1440px;
+$monitor-width: 1920px;
 
 /* Mixins */
 
@@ -22,7 +22,6 @@ $monitor-width:1920px;
     height: 100%;
     width: 100%;
 }
-
 
 /* Media Querys */
 
@@ -33,7 +32,6 @@ $monitor-width:1920px;
 }
 
 @mixin desktop-monitor-ultrawide {
-    @media (min-width: #{$tablet-width} + 1) {
         @content;
     }
 }
