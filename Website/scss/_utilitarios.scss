@@ -32,6 +32,7 @@ $monitor-width: 1920px;
 }
 
 @mixin desktop-monitor-ultrawide {
+    @media (min-width: #{$tablet-width + 1}) {
         @content;
     }
 }
