@@ -14,6 +14,10 @@
         $sexo = $resultado['sexo'];
         $idade = $resultado['idade'];
     }
+
+    else{
+        header("location:./conta");
+    }
     
 ?>
 <section class="perfil">

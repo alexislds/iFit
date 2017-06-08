@@ -12,5 +12,6 @@
     'aluno' => 'aluno',
     'solicitacao-ficha' => 'solicitacao-ficha',
     'ficha' => 'ficha',
+    'logout' => 'logout'
   ];
 ?>

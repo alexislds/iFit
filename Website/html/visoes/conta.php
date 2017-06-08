@@ -88,6 +88,8 @@
         else {
             $_SESSION['id_usuario'] = $resultado['id_usuario'];
             $_SESSION['nome'] = $resultado['nome'];
+
+            header("location:./menu");
         }
       }
     }  
