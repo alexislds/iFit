@@ -2,19 +2,89 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, input, body, button, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+input,
+body,
+button,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,8 +97,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -36,16 +115,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -277,10 +360,10 @@ body {
 .login,
 .cadastro {
   z-index: 2;
-  -webkit-transition: opacity 1000ms ,-webkit-transform 500ms;
-  transition: opacity 1000ms ,-webkit-transform 500ms;
-  transition: transform 500ms ,opacity 1000ms;
-  transition: transform 500ms ,opacity 1000ms ,-webkit-transform 500ms;
+  -webkit-transition: opacity 1000ms, -webkit-transform 500ms;
+  transition: opacity 1000ms, -webkit-transform 500ms;
+  transition: transform 500ms, opacity 1000ms;
+  transition: transform 500ms, opacity 1000ms, -webkit-transform 500ms;
   background: #fefefe;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -1188,4 +1271,104 @@ body {
 
 .solicitacao-ficha-dados-lista-input:not(:first-of-type) {
   margin-top: 30px;
+}
+
+.ficha {
+  padding: 40px 0px;
+}
+
+.ficha-titulo {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+}
+
+.ficha-conteudo {
+  width: 100%;
+}
+
+.ficha-conteudo-cima {
+  margin-top: 40px;
+}
+
+.ficha-conteudo-cima-campo {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 2px 5px;
+  margin-bottom: 5px;
+}
+
+.ficha-conteudo-cima-data {
+  width: 20%;
+  margin-bottom: 0px;
+}
+
+.ficha-conteudo-baixo {
+  margin-top: 60px;
+}
+
+.ficha-conteudo-baixo-treino {
+  margin-top: 20px;
+}
+
+.ficha-conteudo-baixo-treino-tabela {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.ficha-conteudo-baixo-treino-tabela tr, .ficha-conteudo-baixo-treino-tabela td, .ficha-conteudo-baixo-treino-tabela th {
+  border: 1px solid black;
+}
+
+.ficha-conteudo-baixo-treino-titulos, .ficha-conteudo-baixo-treino-dado {
+  padding: 5px 5px;
+  text-align: center;
+}
+
+.ficha-conteudo-baixo-dias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.ficha-conteudo-baixo-dia {
+  display: inline-block;
+}
+
+.ficha-conteudo-baixo-dia label,
+.ficha-conteudo-baixo-dia input {
+  margin: 0 auto;
+  display: block;
+}
+
+.ficha-botoes {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.ficha-botoes-editar, .ficha-botoes-salvar {
+  padding: 4px 15px 7px;
+  border-radius: 3px;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.ficha-botoes-editar {
+  background-color: #33b5e5;
+}
+
+.ficha-botoes-salvar {
+  background-color: #00C851;
+  margin-left: 20px;
+}
+
+.ficha-botoes-editar:hover {
+  background-color: #1a9bcb;
+}
+
+.ficha-botoes-salvar:hover {
+  background-color: #00953c;
 }

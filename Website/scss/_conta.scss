@@ -1,4 +1,5 @@
 @import "utilitarios";
+
 .login,
 .cadastro {
     z-index: 2;
@@ -14,6 +15,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+
     &::before {
         background: $branco;
         border-radius: 50%;
@@ -25,10 +27,12 @@
         top: calc(100% - (70px/2));
         width: 70px;
     }
+
     &-limite {
         height: 100vh;
         overflow: visible;
     }
+
     &-titulo {
         background: #6E2B77;
         color: $branco;
@@ -38,6 +42,7 @@
         padding: 20px;
         width: 100%;
     }
+
     &-input {
         border: 1px solid #ededed;
         border-radius: 3px;
@@ -47,23 +52,29 @@
         transition: all 300ms;
         width: calc(100% - 40px);
     }
+
     &-input:focus {
         color: #6E2B77;
         border: 1px solid #6E2B77;
     }
+
     &-input::placeholder {
         color: #ccc;
     }
+
     &-input:focus::placeholder {
         color: #6E2B77;
     }
+
     &-texto {
         color: #ccc;
         transition: color 300ms;
     }
+
     &-texto:hover {
         color: #6E2B77;
     }
+
     &-botao {
         background: $branco url(../img/login-botao-desativado.png) no-repeat center;
         border: 1px solid #ccc;
@@ -73,6 +84,7 @@
         transition: all 300ms;
         width: 56px;
     }
+
     &-botao:hover {
         background: $branco url(../img/login-botao.png) no-repeat center;
         border: 1px solid #6E2B77;
@@ -83,15 +95,18 @@
     width: 500px;
     height: 570px;
     margin: -285px 0px 0px -250px;
+
     &-opcoes {
         width: calc(100% - 40px);
         display: flex;
         justify-content: space-around;
     }
+
     &-opcoes-aluno,
     &-opcoes-professor {
         text-align: center;
     }
+
     &-opcoes-texto {
         color: #6E2B77;
         margin-top: 5px;
@@ -102,17 +117,21 @@
     height: 300px;
     width: 350px;
     margin: -150px 0px 0px -175px;
+
     &-email {
         background: url(../img/login-email.png) no-repeat 10px center;
         padding: 10px 10px 10px 40px;
     }
+
     &-email:focus {
         background: url(../img/login-email-focus.png) no-repeat 10px center;
     }
+
     &-senha {
         background: url(../img/login-senha.png) no-repeat 15px center;
         padding: 10px 10px 10px 40px;
     }
+
     &-senha:focus {
         background: url(../img/login-senha-focus.png) no-repeat 15px center;
     }
