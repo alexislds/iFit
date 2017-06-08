@@ -1,115 +1,96 @@
 <?php
-    include("./classes/db.php");
-
     if(!empty($_POST)){
+      if(isset($_POST["cadastroTipo"], $_POST["cadastroNome"], $_POST["cadastroIdade"], $_POST["cadastroSexo"], $_POST["cadastroEmail"], $_POST["cadastroSenha"])){
+        $cadastroTipo = $_POST["cadastroTipo"];
+         $cadastroNome = "'" . $_POST["cadastroNome"] . "'";
+         $cadastroAcademia = "'" . $_POST["cadastroAcademia"] . "'";
+         $cadastroIdade = intval($_POST["cadastroIdade"]);
+         $cadastroSexo = "'" . $_POST["cadastroSexo"] . "'";
+         $cadastroEmail = "'" . $_POST["cadastroEmail"] . "'";
+         $cadastroSenha = "'" . $_POST["cadastroSenha"] . "'";
 
-        // CADASTRO
-       // $cadastroTipo = $_POST["cadastroTipo"];
-       // $cadastroNome = "'" . $_POST["cadastroNome"] . "'";
-       // $cadastroAcademia = "'" . $_POST["cadastroAcademia"] . "'";
-       // $cadastroIdade = intval($_POST["cadastroIdade"]);
-       // $cadastroSexo = "'" . $_POST["cadastroSexo"] . "'";
-       // $cadastroEmail = "'" . $_POST["cadastroEmail"] . "'";
-       // $cadastroSenha = "'" . $_POST["cadastroSenha"] . "'";
+         if($cadastroTipo == "Aluno"){
+              $conexao->query("
+                  INSERT INTO USUARIO (
+                      email,senha,nome,academia,sexo,idade
+                  )
+                  VALUES (
+                      $cadastroEmail,
+                      $cadastroSenha,
+                      $cadastroNome,
+                      $cadastroAcademia,
+                      $cadastroSexo,
+                      $cadastroIdade
+                  );
+              ");
 
-       // if($cadastroTipo == "Aluno"){
-       //      $conexao->query("
-       //          INSERT INTO USUARIO (
-       //              email,senha,nome,academia,sexo,idade
-       //          )
-       //          VALUES (
-       //              $cadastroEmail,
-       //              $cadastroSenha,
-       //              $cadastroNome,
-       //              $cadastroAcademia,
-       //              $cadastroSexo,
-       //              $cadastroIdade
-       //          );
-       //      ");
+              $resultado = $conexao->query("
+                  SELECT id_usuario FROM USUARIO WHERE email = $cadastroEmail;
+              ");
 
-       //      $resultado = $conexao->query("
-       //          SELECT id_usuario FROM USUARIO WHERE email = $cadastroEmail;
-       //      ");
+              $id = intval($resultado->fetch_assoc()['id_usuario']);
 
-       //      $id = intval($resultado->fetch_assoc()['id_usuario']);
+              $conexao->query("
+                  INSERT INTO ALUNO (
+                      id_usuario
+                  )
+                  VALUES (
+                      $id
+                  );
+              ");
+         }
 
-       //      var_dump($id);
+         elseif($cadastroTipo == "Professor"){
+              $conexao->query("
+                  INSERT INTO USUARIO (
+                      email,senha,nome,academia,sexo,idade
+                  )
+                  VALUES (
+                      $cadastroEmail,
+                      $cadastroSenha,
+                      $cadastroNome,
+                      $cadastroAcademia,
+                      $cadastroSexo,
+                      $cadastroIdade
+                  );
+              ");
 
-       //      $conexao->query("
-       //          INSERT INTO ALUNO (
-       //              id_usuario
-       //          )
-       //          VALUES (
-       //              $id
-       //          );
-       //      ");
-       // }
+              $resultado = $conexao->query("
+                  SELECT * FROM USUARIO WHERE email = $cadastroEmail;
+              ");
 
-       // elseif($cadastroTipo == "Professor"){
-       //      $conexao->query("
-       //          INSERT INTO USUARIO (
-       //              email,senha,nome,academia,sexo,idade
-       //          )
-       //          VALUES (
-       //              $cadastroEmail,
-       //              $cadastroSenha,
-       //              $cadastroNome,
-       //              $cadastroAcademia,
-       //              $cadastroSexo,
-       //              $cadastroIdade
-       //          );
-       //      ");
+              $id = intval($resultado->fetch_assoc()['id_usuario']);
 
-       //      $resultado = $conexao->query("
+              $conexao->query("
+                  INSERT INTO PROFESSOR (
+                      id_usuario
+                  )
+                  VALUES (
+                      $id
+                  );
+              ");
+         }
+      }
 
-       //          SELECT * FROM USUARIO WHERE email = $cadastroEmail;
-
-       //      ");
-
-       //      $id = intval($resultado->fetch_assoc()['id_usuario']);
-
-       //      var_dump($id);
-
-       //      $conexao->query("
-       //          INSERT INTO PROFESSOR (
-       //              id_usuario
-       //          )
-       //          VALUES (
-       //              $id
-       //          );
-       //      ");
-       // }
-
-       // LOGIN
+      elseif(isset($_POST['loginEmail'], $_POST['loginSenha'])){
         $loginEmail = "'" . $_POST['loginEmail'] . "'";
         $loginSenha = "'" . $_POST['loginSenha'] . "'";
 
         $resultado = $conexao->query("
-
             SELECT id_usuario,nome,email,senha
             FROM USUARIO
             WHERE email = $loginEmail AND senha = $loginSenha; 
-
         ")->fetch_assoc();
 
         if(is_null($resultado)){
             echo "Não encontrei";
-
-
         }
         else {
-            echo "Encontrei";
-
             $_SESSION['id_usuario'] = $resultado['id_usuario'];
             $_SESSION['nome'] = $resultado['nome'];
-
-
-            echo $_SESSION['id_usuario'];
-            echo $_SESSION['nome'];
-
         }
-    }
-    
+      }
+    }  
 ?>
 <section class="login-limite">
     <form action="conta" method="post">

@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+    include("./classes/db.php");
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
