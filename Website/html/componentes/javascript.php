@@ -5,3 +5,4 @@
 <script src="/ifit/website/js/navegacao.js"></script>
 <script src="/ifit/website/js/conta.js"></script>
 <script src="/ifit/website/js/perfil.js"></script>
+<script src="/ifit/website/js/especificacoes.js"></script>
