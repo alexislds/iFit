@@ -39,6 +39,7 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtIdade = new System.Windows.Forms.TextBox();
             this.lblErroAcademia = new System.Windows.Forms.Label();
             this.lblErroSenha = new System.Windows.Forms.Label();
             this.lblErroEmail = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.lblErroNome = new System.Windows.Forms.Label();
             this.lblAcademia = new System.Windows.Forms.Label();
             this.txtAcademia = new System.Windows.Forms.TextBox();
-            this.txtIdade = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,6 +174,14 @@
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtIdade
+            // 
+            this.txtIdade.Location = new System.Drawing.Point(119, 67);
+            this.txtIdade.MaxLength = 2;
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.Size = new System.Drawing.Size(178, 20);
+            this.txtIdade.TabIndex = 19;
+            // 
             // lblErroAcademia
             // 
             this.lblErroAcademia.AutoSize = true;
@@ -257,14 +265,6 @@
             this.txtAcademia.Name = "txtAcademia";
             this.txtAcademia.Size = new System.Drawing.Size(178, 20);
             this.txtAcademia.TabIndex = 11;
-            // 
-            // txtIdade
-            // 
-            this.txtIdade.Location = new System.Drawing.Point(119, 67);
-            this.txtIdade.MaxLength = 1;
-            this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(178, 20);
-            this.txtIdade.TabIndex = 19;
             // 
             // Cadastro
             // 

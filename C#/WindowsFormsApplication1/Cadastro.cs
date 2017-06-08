@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1
             if (validaCampos()) {
                 string status = fit.inserir(al);
                 MessageBox.Show(status, "Salvar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                limpar();
+                if(!status.Equals("Erro ao inserir"))limpar();
             }
            
 

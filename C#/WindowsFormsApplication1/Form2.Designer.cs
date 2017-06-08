@@ -32,20 +32,23 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnLimparLista = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Academia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnLimparLista = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(12, 369);
+            this.btnListar.Location = new System.Drawing.Point(258, 373);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(144, 41);
+            this.btnListar.Size = new System.Drawing.Size(123, 41);
             this.btnListar.TabIndex = 0;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -66,17 +69,19 @@
             this.idade,
             this.sexo,
             this.email,
-            this.Academia});
+            this.Academia,
+            this.ID});
             this.dgListarUsuario.GridColor = System.Drawing.Color.AliceBlue;
             this.dgListarUsuario.Location = new System.Drawing.Point(0, 0);
             this.dgListarUsuario.Name = "dgListarUsuario";
             this.dgListarUsuario.Size = new System.Drawing.Size(915, 363);
             this.dgListarUsuario.TabIndex = 1;
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
+            this.dgListarUsuario.SelectionChanged += new System.EventHandler(this.dgListarUsuario_SelectionChanged);
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(178, 369);
+            this.btnCadastrar.Location = new System.Drawing.Point(94, 373);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(125, 41);
             this.btnCadastrar.TabIndex = 2;
@@ -84,11 +89,40 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // btnLimparLista
+            // 
+            this.btnLimparLista.Location = new System.Drawing.Point(757, 371);
+            this.btnLimparLista.Name = "btnLimparLista";
+            this.btnLimparLista.Size = new System.Drawing.Size(120, 41);
+            this.btnLimparLista.TabIndex = 3;
+            this.btnLimparLista.Text = "Limpar";
+            this.btnLimparLista.UseVisualStyleBackColor = true;
+            this.btnLimparLista.Click += new System.EventHandler(this.btnLimparLista_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(427, 373);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(114, 41);
+            this.btnExcluir.TabIndex = 4;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(582, 373);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 39);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // nome
             // 
             this.nome.HeaderText = "Nome";
             this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
             // 
             // idade
             // 
@@ -106,28 +140,25 @@
             // 
             this.email.HeaderText = "E-mail";
             this.email.Name = "email";
-            this.email.ReadOnly = true;
             // 
             // Academia
             // 
             this.Academia.HeaderText = "Academia";
             this.Academia.Name = "Academia";
             // 
-            // btnLimparLista
+            // ID
             // 
-            this.btnLimparLista.Location = new System.Drawing.Point(783, 369);
-            this.btnLimparLista.Name = "btnLimparLista";
-            this.btnLimparLista.Size = new System.Drawing.Size(120, 41);
-            this.btnLimparLista.TabIndex = 3;
-            this.btnLimparLista.Text = "Limpar";
-            this.btnLimparLista.UseVisualStyleBackColor = true;
-            this.btnLimparLista.Click += new System.EventHandler(this.btnLimparLista_Click);
+            this.ID.HeaderText = "Codigo";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 422);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnLimparLista);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.dgListarUsuario);
@@ -145,11 +176,14 @@
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.DataGridView dgListarUsuario;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnLimparLista;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn idade;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Academia;
-        private System.Windows.Forms.Button btnLimparLista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }
