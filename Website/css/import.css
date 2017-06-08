@@ -643,8 +643,18 @@ body {
   width: 60%;
 }
 
+.perfil-lista-item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.perfil-lista-label {
+  font-family: "Lato", sans-serif;
+}
+
 .perfil-lista-input {
-  background: white;
+  margin-top: 3px;
+  border: 1px solid #d4d4d4;
+  background: #f1f1f1;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -686,6 +696,10 @@ body {
 
 .perfil-lista-salvar:hover {
   background-color: #00953c;
+}
+
+.campo-habilitado {
+  background-color: white;
 }
 
 .fichas {

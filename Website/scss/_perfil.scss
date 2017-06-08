@@ -19,8 +19,21 @@
         margin: 40px auto 0;
         width: 60%;
 
+
+        &-item:not(:first-of-type){
+            margin-top: 20px;
+
+        }
+
+        &-label{
+            font-family: $fonteA; 
+        }
+     
+
         &-input {
-            background: white;
+            margin-top:3px;
+            border: 1px solid #d4d4d4;
+            background: #f1f1f1;
             color: black;
             border-radius: 5px;
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -65,3 +78,11 @@
         }
     }
 }
+
+
+.campo-habilitado{
+     background-color: white; 
+}
+ 
+
+  
