@@ -19,6 +19,36 @@ namespace WindowsFormsApplication1
         public MySqlConnection getCon() {
             return this.con;
         }
+
+        public bool excluir( Aluno aluno) {
+            string delete = "DELETE FROM usuario where id_usuario='" + aluno.getId()+"'";
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(delete, con);
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch {
+                return false;
+            }
+    
+        }
+
+        public bool editar(Aluno aluno)
+        {
+            string up = "UPDATE usuario SET nome = '" + aluno.getNome() + "',academia ='" + aluno.getNomeAcademia() +"',Idade = '"+ aluno.getIdade() + "', sexo ='" + aluno.getSexo() + "',email = '" + aluno.getEmail() + "', senha ='"+aluno.getSenha()+ "' where id_usuario='"+aluno.getId() +"'";
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(up, con);
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
         public string inserir(Aluno aluno) {
             string insert = "INSERT INTO usuario (nome , academia , Idade , Sexo , Email , Senha) values ('"+aluno.getNome()+"','"+aluno.getNomeAcademia()+"','"+aluno.getIdade()+"','"+aluno.getSexo()+ "','" +aluno.getEmail()+ "','" +aluno.getSenha()+ "')";
             

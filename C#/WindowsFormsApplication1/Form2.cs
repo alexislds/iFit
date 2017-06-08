@@ -13,6 +13,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form2 : Form
     {
+        int linhaSelec;
         public Form2()
         {
             InitializeComponent();
@@ -31,9 +32,11 @@ namespace WindowsFormsApplication1
 
            
             if (listaUsuario != null) {
+                dgListarUsuario.Rows.Clear();
                 for (int i = 0; i < listaUsuario.Count; i++)
                 {
-                    dgListarUsuario.Rows.Add(listaUsuario[i].getId(), listaUsuario[i].getNome(), listaUsuario[i].getSexo(),listaUsuario[i].getNomeAcademia());
+                    
+                    dgListarUsuario.Rows.Add(listaUsuario[i].getNome(), listaUsuario[i].getIdade(), listaUsuario[i].getSexo(),listaUsuario[i].getEmail(),listaUsuario[i].getNomeAcademia(),listaUsuario[i].getId());
                 }
 
             }
@@ -56,6 +59,87 @@ namespace WindowsFormsApplication1
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+            cadastro.Show();
+        }
+
+        private void btnLimparLista_Click(object sender, EventArgs e)
+        {
+            dgListarUsuario.Rows.Clear();
+        }
+
+        private void dgListarUsuario_SelectionChanged(object sender, EventArgs e)
+        {
+             linhaSelec = dgListarUsuario.CurrentRow.Index; // pega o indice da linha selecionada.
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            AcessoDb acDb = new AcessoDb();
+            MySqlConnection con = new MySqlConnection();
+            con = acDb.OpenConnetion();
+            FitDao fit = new FitDao(con);
+            Aluno user = new Aluno();
+            if (!(dgListarUsuario.Rows[linhaSelec].Cells[5].Value == null))
+            {
+                user.setId(dgListarUsuario.Rows[linhaSelec].Cells[5].Value.ToString());
+                bool msg = fit.excluir(user);
+                if (msg == true)
+                {
+                    MessageBox.Show("Registro excluído", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    btnListar.PerformClick();
+                }
+                else
+                {
+
+                    MessageBox.Show("Registro não foi exlcluído", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else {
+                MessageBox.Show("Não há regitros selecionados","Excluir" ,MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AcessoDb acDb = new AcessoDb();
+            MySqlConnection con = new MySqlConnection();
+            con = acDb.OpenConnetion();
+            FitDao fit = new FitDao(con);
+            Aluno user = new Aluno();
+            if (!(dgListarUsuario.Rows[linhaSelec].Cells[0].Value == null))
+            {
+                user.setNome(dgListarUsuario.Rows[linhaSelec].Cells[0].Value.ToString());
+                user.setIdade(dgListarUsuario.Rows[linhaSelec].Cells[1].Value.ToString());
+                user.setSexo(dgListarUsuario.Rows[linhaSelec].Cells[2].Value.ToString());
+                user.setEmail(dgListarUsuario.Rows[linhaSelec].Cells[3].Value.ToString());
+                user.setNomeAcademia(dgListarUsuario.Rows[linhaSelec].Cells[4].Value.ToString());
+                user.setId(dgListarUsuario.Rows[linhaSelec].Cells[5].Value.ToString());
+                bool msg = fit.editar(user);
+                if (msg == true)
+                {
+                    MessageBox.Show("Registro Editado", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    btnListar.PerformClick();
+                }
+                else
+                {
+
+                    MessageBox.Show("Não foi possível salvar as alteração", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não há regitros selecionados", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
