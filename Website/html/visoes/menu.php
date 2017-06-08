@@ -19,7 +19,7 @@
 				else{
 					echo "<button class='menu-lista-botao' type='button'><a class='menu-lista-link' href='./perfil'>Meu perfil</a></button>";
         			echo "<button class='menu-lista-botao'><a class='menu-lista-link' href='./alunos'>Meus alunos</a></button>";
-        			echo "<button class='menu-lista-botao'><a class='menu-lista-link' href='./solicitacoes-fichas'>Verificar lista de solicitantes de fichas de treino</a></button>";
+        			echo "<button class='menu-lista-botao'><a class='menu-lista-link' href='./solicitacoes-fichas'>Solicitações de Fichas</a></button>";
 				}
 			}
 			else{
