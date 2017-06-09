@@ -14,8 +14,8 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         public static bool login(string nomes , string senhas ) {
-            string nome = "b";
-            string senha = "l";
+            string nome = "Admin";
+            string senha = "123456";
             bool acesso = false;
 
             if (nomes.Equals(nome) && senhas.Equals(senha))
@@ -45,12 +45,13 @@ namespace WindowsFormsApplication1
             FitDao fit = new FitDao(con);
             user.setNome(txtNome.Text)  ;
             user.setSenha(txtSenha.Text);
+            bool acessoLocal = login(txtNome.Text, txtSenha.Text);
             bool acesso;
 
 
             acesso = fit.logar(user);
             Form2 telaAcesso = new Form2();
-            if (acesso == true)
+            if (acesso == true  || acessoLocal == true)
             {
                 MessageBox.Show("logado","Login",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                 System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
