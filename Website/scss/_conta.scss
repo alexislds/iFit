@@ -76,7 +76,7 @@
     }
 
     &-botao {
-        background: $branco url(./img/login-botao-desativado.png) no-repeat center;
+        background: $branco url(../img/login-botao-desativado.png) no-repeat center;
         border: 1px solid #ccc;
         border-radius: 50%;
         height: 56px;
@@ -86,7 +86,7 @@
     }
 
     &-botao:hover {
-        background: $branco url(./img/login-botao.png) no-repeat center;
+        background: $branco url(../img/login-botao.png) no-repeat center;
         border: 1px solid #6E2B77;
     }
 }
