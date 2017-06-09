@@ -14,7 +14,7 @@ iframe,
 h1,
 h2,
 h3,
-h4, 
+h4,
 h5,
 h6,
 p,
@@ -275,6 +275,10 @@ body {
 
 .navegacao-menu-item-conta {
   background: white url(../img/conta-navegacao.png) no-repeat center;
+}
+
+.navegacao-menu-item-logout {
+  background: white url(../img/logout-navegacao.png) no-repeat center;
 }
 
 .navegacao-menu-item {
@@ -652,7 +656,7 @@ body {
 }
 
 .perfil-lista-input {
-  margin-top: 3px;
+  margin-top: 6px;
   border: 1px solid #d4d4d4;
   background: #f1f1f1;
   color: black;
@@ -793,8 +797,18 @@ body {
   width: 60%;
 }
 
+.especificacoes-lista-item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.especificacoes-lista-label {
+  font-family: "Lato", sans-serif;
+}
+
 .especificacoes-lista-input {
-  background: white;
+  margin-top: 6px;
+  border: 1px solid #d4d4d4;
+  background: #f1f1f1;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -836,6 +850,10 @@ body {
 
 .especificacoes-lista-salvar:hover {
   background-color: #00953c;
+}
+
+.campo-habilitado {
+  background-color: white;
 }
 
 .alunos {
@@ -929,8 +947,18 @@ body {
   width: 60%;
 }
 
+.solicita-ficha-lista-item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.solicita-ficha-lista-label {
+  font-family: "Lato", sans-serif;
+}
+
 .solicita-ficha-lista-input {
-  background: white;
+  margin-top: 9px;
+  border: 1px solid #d4d4d4;
+  background: #f1f1f1;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
