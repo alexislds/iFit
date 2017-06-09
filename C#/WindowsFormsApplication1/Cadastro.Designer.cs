@@ -149,6 +149,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.txtIdade);
             this.panel1.Controls.Add(this.lblErroAcademia);
             this.panel1.Controls.Add(this.lblErroSenha);
@@ -168,7 +169,7 @@
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.lblNome);
-            this.panel1.Location = new System.Drawing.Point(35, 28);
+            this.panel1.Location = new System.Drawing.Point(37, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(439, 292);
             this.panel1.TabIndex = 11;
@@ -270,9 +271,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 332);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(528, 334);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(544, 571);
             this.Name = "Cadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
