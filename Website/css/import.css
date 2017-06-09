@@ -299,6 +299,15 @@ body {
   overflow: hidden;
 }
 
+.navegacao-paragrafo {
+  position: absolute;
+  top: 20px;
+  left: 1000px;
+  width: 600px;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+}
+
 .navegacao-botao {
   background: red;
   height: 100px;

@@ -16,6 +16,8 @@
             }
             
         ?>
+    
+
         <li class="navegacao-menu-item navegacao-menu-item-sobre">
             <a href="#" class="navegacao-menu-link">Sobre</a>
         </li>
@@ -23,5 +25,10 @@
             <a href="#" class="navegacao-menu-link">Contato</a>
         </li>
     </ul>
+
+   
     <div class="navegacao-botao" type="button"></div>
 </nav>
+   <?php
+        echo "<p class='navegacao-paragrafo'>Olá seja bem vindo,".$_SESSION['nome']."</p>";
+     ?>

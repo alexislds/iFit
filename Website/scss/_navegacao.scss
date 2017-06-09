@@ -54,7 +54,16 @@
         }
     }
 
-    &-botao {
+    &-paragrafo{
+        position: absolute; 
+        top: 20px; 
+        left: 1000px;
+        width: 600px; 
+        font-family: $fonteA;
+        font-size: 15px;
+    }
+
+    &-botao { 
         background: red;
         height: 100px;
         left: 100%;
