@@ -54,16 +54,15 @@
         }
     }
 
-    &-paragrafo{
-        position: absolute; 
-        top: 20px; 
-        left: 1000px;
-        width: 600px; 
+    &-paragrafo {
+        position: absolute;
+        top: 20px;
+        right: 70px;
         font-family: $fonteA;
         font-size: 15px;
     }
 
-    &-botao { 
+    &-botao {
         background: red;
         height: 100px;
         left: 100%;

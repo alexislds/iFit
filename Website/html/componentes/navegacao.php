@@ -30,5 +30,7 @@
     <div class="navegacao-botao" type="button"></div>
 </nav>
    <?php
-        echo "<p class='navegacao-paragrafo'>Olá seja bem vindo,".$_SESSION['nome']."</p>";
-     ?>
+        if(isset($_SESSION['id_usuario'])){
+            echo "<p class='navegacao-paragrafo'>Olá seja bem vindo, ".$_SESSION['nome'].".</p>";
+        }
+    ?>
