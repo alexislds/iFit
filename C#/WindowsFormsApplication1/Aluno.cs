@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
             this.nomeAcademia = nomeAcademia;
         }
         public string getNomeAcademia() {
-            return this.nome;
+            return this.nomeAcademia;
         }
         public void setIdade(string idade) {
             this.idade = idade;

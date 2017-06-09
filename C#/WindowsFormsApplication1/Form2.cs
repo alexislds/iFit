@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     public partial class Form2 : Form
     {
         int linhaSelec;
+        string tipoListar;
         public Form2()
         {
             InitializeComponent();
@@ -21,28 +22,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AcessoDb acDb = new AcessoDb();
-            MySqlConnection con = new MySqlConnection();
-            con = acDb.OpenConnetion();
-            FitDao fit = new FitDao(con);
-            List<Aluno> listaUsuario = new List<Aluno>();
-            listaUsuario = fit.litarUsuario();
-            DataTable tb = new DataTable();
-
-
            
-            if (listaUsuario != null) {
-                dgListarUsuario.Rows.Clear();
-                for (int i = 0; i < listaUsuario.Count; i++)
-                {
-                    
-                    dgListarUsuario.Rows.Add(listaUsuario[i].getNome(), listaUsuario[i].getIdade(), listaUsuario[i].getSexo(),listaUsuario[i].getEmail(),listaUsuario[i].getNomeAcademia(),listaUsuario[i].getId());
-                }
-
-            }
-            else {
-                MessageBox.Show("Não há dados");
-            }
 
         }
 
@@ -74,6 +54,7 @@ namespace WindowsFormsApplication1
 
         private void btnLimparLista_Click(object sender, EventArgs e)
         {
+            lblLista.Text = "";
             dgListarUsuario.Rows.Clear();
         }
 
@@ -96,7 +77,9 @@ namespace WindowsFormsApplication1
                 if (msg == true)
                 {
                     MessageBox.Show("Registro excluído", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    btnListar.PerformClick();
+                    if (tipoListar.Equals("aluno")) listarAlunosToolStripMenuItem.PerformClick();
+                    if (tipoListar.Equals("usuario")) listarUsuariosToolStripMenuItem.PerformClick();
+                    if (tipoListar.Equals("professor")) listarUsuariosToolStripMenuItem.PerformClick();
                 }
                 else
                 {
@@ -128,7 +111,9 @@ namespace WindowsFormsApplication1
                 if (msg == true)
                 {
                     MessageBox.Show("Registro Editado", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    btnListar.PerformClick();
+                    if(tipoListar.Equals("aluno"))listarAlunosToolStripMenuItem.PerformClick();
+                    if (tipoListar.Equals("usuario")) listarUsuariosToolStripMenuItem.PerformClick();
+                    if (tipoListar.Equals("professor")) listarProfessoresToolStripMenuItem.PerformClick();
                 }
                 else
                 {
@@ -139,6 +124,107 @@ namespace WindowsFormsApplication1
             else
             {
                 MessageBox.Show("Não há regitros selecionados", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void adcionarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+            cadastro.Show();
+        }
+
+        private void fichasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblLista.Text = "Lista de usuários";
+            tipoListar = "usuario";
+            AcessoDb acDb = new AcessoDb();
+            MySqlConnection con = new MySqlConnection();
+            con = acDb.OpenConnetion();
+            FitDao fit = new FitDao(con);
+            List<Aluno> listaUsuario = new List<Aluno>();
+            listaUsuario = fit.litarUsuario();
+            DataTable tb = new DataTable();
+
+
+
+            if (listaUsuario != null)
+            {
+                dgListarUsuario.Rows.Clear();
+                for (int i = 0; i < listaUsuario.Count; i++)
+                {
+
+                    dgListarUsuario.Rows.Add(listaUsuario[i].getNome(), listaUsuario[i].getIdade(), listaUsuario[i].getSexo(), listaUsuario[i].getEmail(), listaUsuario[i].getNomeAcademia(), listaUsuario[i].getId());
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Não há dados");
+            }
+        }
+
+        private void listarAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblLista.Text = "Lista de alunos";
+            tipoListar = "aluno";
+            AcessoDb acDb = new AcessoDb();
+            MySqlConnection con = new MySqlConnection();
+            con = acDb.OpenConnetion();
+            FitDao fit = new FitDao(con);
+            List<Aluno> listaAluno = new List<Aluno>();
+            listaAluno = fit.litarAluno();
+            DataTable tb = new DataTable();
+
+
+
+            if (listaAluno != null)
+            {
+                dgListarUsuario.Rows.Clear();
+                for (int i = 0; i < listaAluno.Count; i++)
+                {
+
+                    dgListarUsuario.Rows.Add(listaAluno[i].getNome(), listaAluno[i].getIdade(), listaAluno[i].getSexo(), listaAluno[i].getEmail(), listaAluno[i].getNomeAcademia(), listaAluno[i].getId());
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Não há dados");
+            }
+        }
+
+        private void listarProfessoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblLista.Text = "Lista de professores";
+            tipoListar = "professor";
+            AcessoDb acDb = new AcessoDb();
+            MySqlConnection con = new MySqlConnection();
+            con = acDb.OpenConnetion();
+            FitDao fit = new FitDao(con);
+            List<Aluno> listaProfessor = new List<Aluno>();
+            listaProfessor = fit.litarProfesor();
+            DataTable tb = new DataTable();
+
+
+
+            if (listaProfessor != null)
+            {
+                dgListarUsuario.Rows.Clear();
+                for (int i = 0; i < listaProfessor.Count; i++)
+                {
+
+                    dgListarUsuario.Rows.Add(listaProfessor[i].getNome(), listaProfessor[i].getIdade(), listaProfessor[i].getSexo(), listaProfessor[i].getEmail(), listaProfessor[i].getNomeAcademia(), listaProfessor[i].getId());
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Não há dados");
             }
         }
     }
