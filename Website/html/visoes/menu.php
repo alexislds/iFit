@@ -2,7 +2,7 @@
     <h1 class="menu-titulo">Menu</h1>
     <img src="./img/img-perfil.jpg" class="menu-foto">
     <div class="menu-lista">
-    	<?php 
+    	<?php
 			if(isset($_SESSION['id_usuario'])){
 				$id = "'" . $_SESSION['id_usuario'] . "'";
 

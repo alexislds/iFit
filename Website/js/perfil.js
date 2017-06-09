@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 function editarInputsPerfil(){
 $(".perfil-lista-editar").click(function(){
-    var inputs = $(this).parent().parent().find('.perfil-lista-input');
+    var inputs = $(this).parent().parent().find('.perfilJs');
     inputs.attr("disabled",false);
     inputs.addClass('campo-habilitado');
 }); 
