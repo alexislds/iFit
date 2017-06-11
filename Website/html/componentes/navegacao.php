@@ -31,6 +31,6 @@
 </nav>
    <?php
         if(isset($_SESSION['id_usuario'])){
-            echo "<p class='navegacao-paragrafo'>Olá seja bem vindo, ".$_SESSION['nome'].".</p>";
+            echo "<p class='navegacao-paragrafo'>Olá seja bem vindo,".$_SESSION['nome'].".</p>";
         }
-    ?>
+    ?> 
