@@ -10,7 +10,7 @@
         			echo "<button class='menu-lista-botao' type='button'><a class='menu-lista-link' href='./perfil'>Meu perfil</a></button>";
         			echo "<button class='menu-lista-botao'><a class='menu-lista-link' href='./alunos'>Minhas Fichas</a></button>";
         			echo "<button class='menu-lista-botao'><a class='menu-lista-link' href='./solicitacoes-fichas'>Solicitar Fichas</a></button>";
-        			echo "<button class='menu-lista-botao'><a class='menu-lista-link' a href='#'>Especificacoes</a></button>";
+        			echo "<button class='menu-lista-botao'><a class='menu-lista-link' a href='./especificacoes'>Especificacoes</a></button>";
 				}
 				elseif($tipo == 1){
 					echo "<button class='menu-lista-botao' type='button'><a class='menu-lista-link' href='./perfil'>Meu perfil</a></button>";

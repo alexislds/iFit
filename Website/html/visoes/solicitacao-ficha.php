@@ -23,4 +23,9 @@
             </div>
         </form>
     </div>
+     <div class="solicitacao-ficha-botao">
+       <button class="solicitacao-ficha-aceitar">Aceitar</button>
+     </div>
 </section>
+
+ 

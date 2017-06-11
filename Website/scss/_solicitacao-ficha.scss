@@ -83,8 +83,25 @@
             }
 
             &-input:not(:first-of-type) {
-                margin-top: 30px;
+                margin-top: 20px;
             }
-        }
-    }
+
+        } 
+    } 
+
+      &-botao{
+            margin: 20px auto 0px;
+            display: inline-block;
+      }
+ 
+      &-aceitar{
+            background-color: #00C851;
+            color: white;
+            font-family: $fonteA;
+            padding: 4px 15px 7px;
+
+            &:hover{
+                background-color: #00953c;
+            }
+      }   
 }
