@@ -8,8 +8,8 @@
 
 				if($tipo == 2){
         			echo "<button class='menu-lista-botao' type='button'><a class='menu-lista-link' href='./perfil'>Meu perfil</a></button>";
-        			echo "<button class='menu-lista-botao'><a class='menu-lista-link' href='./alunos'>Minhas Fichas</a></button>";
-        			echo "<button class='menu-lista-botao'><a class='menu-lista-link' href='./solicitacoes-fichas'>Solicitar Fichas</a></button>";
+        			echo "<button class='menu-lista-botao'><a class='menu-lista-link' href='./fichas'>Minhas Fichas</a></button>";
+        			echo "<button class='menu-lista-botao'><a class='menu-lista-link' href='./solicitar-ficha'>Solicitar Fichas</a></button>";
         			echo "<button class='menu-lista-botao'><a class='menu-lista-link' a href='./especificacoes'>Especificacoes</a></button>";
 				}
 				elseif($tipo == 1){

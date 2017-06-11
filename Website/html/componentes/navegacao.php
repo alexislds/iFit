@@ -16,14 +16,6 @@
             }
             
         ?>
-    
-
-        <li class="navegacao-menu-item navegacao-menu-item-sobre">
-            <a href="#" class="navegacao-menu-link">Sobre</a>
-        </li>
-        <li class="navegacao-menu-item navegacao-menu-item-contato">
-            <a href="#" class="navegacao-menu-link">Contato</a>
-        </li>
     </ul>
 
    

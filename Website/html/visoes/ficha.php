@@ -1,3 +1,14 @@
+<?php 
+
+    if(!empty($_POST)){
+        echo $_POST['fichaSolicitacao'];
+        $_POST['fichaAluno'];
+        $_POST['fichaTipo'];
+
+
+    }
+
+?>
 <section class="ficha">
     <h1 class="ficha-titulo">Ficha de Treino</h1>
     <div class="ficha-conteudo">
