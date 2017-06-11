@@ -1,22 +1,24 @@
 <?php
 
     if(isset($_SESSION['id_usuario'])){
-        $id = "'" . $_SESSION['id_usuario'] . "'";
+        $id = intval($_SESSION['id_usuario']);
 
-        if(isset($_POST["perfilEmail"], $_POST["perfilSenha"], $_POST["perfilNome"], $_POST["perfilAcademia"], $_POST["perfilSexo"], $_POST["perfilIdade"])){
-            $perfilEmail = "'" . $_POST["perfilEmail"] . "'";
-            $perfilSenha = "'" . $_POST["perfilSenha"] . "'";
-            $perfilNome = "'" . $_POST["perfilNome"] . "'";
-            $perfilAcademia = "'" . $_POST["perfilAcademia"] . "'";
-            $perfilSexo = "'" . $_POST["perfilSexo"] . "'";
-            $perfilIdade = intval($_POST["perfilIdade"]);
+        if(!empty($_POST)){
+            if(isset($_POST["perfilSenha"], $_POST["perfilNome"], $_POST["perfilAcademia"], $_POST["perfilSexo"], $_POST["perfilIdade"])){
+                $perfilSenha = "'" . $_POST["perfilSenha"] . "'";
+                $perfilNome = "'" . $_POST["perfilNome"] . "'";
+                $perfilAcademia = "'" . $_POST["perfilAcademia"] . "'";
+                $perfilSexo = "'" . $_POST["perfilSexo"] . "'";
+                $perfilIdade = intval($_POST["perfilIdade"]);
 
-            $conexao->query("
-                UPDATE USUARIO
-                SET senha = $perfilSenha, nome = $perfilNome, academia = $perfilAcademia, sexo = $perfilSexo, idade = $perfilIdade
-                WHERE id_usuario = $id;
-            ");
+                $conexao->query("
+                    UPDATE USUARIO
+                    SET senha = $perfilSenha, nome = $perfilNome, academia = $perfilAcademia, sexo = $perfilSexo, idade = $perfilIdade
+                    WHERE id_usuario = $id;
+                ");
+            } 
         }
+        
 
         $resultado = $conexao->query("
         SELECT email, senha, nome, academia, sexo, idade FROM USUARIO WHERE id_usuario = $id;
@@ -40,37 +42,43 @@
         <div class="perfil-lista">
             <?php 
                 if(isset($_SESSION['id_usuario'])){
-                    echo "<div class='perfil-lista-item'>";
-                    echo "<label class='perfil-lista-label'>Seu email:</label>";
-                    echo "<input class='perfil-lista-input' name='perfilEmail' type='text' placeholder='Seu email:' value='$email' disabled>";
-                    echo "</div>";
-
-                    echo "<div class='perfil-lista-item' >";
-                    echo "<label class='perfil-lista-label'>Sua senha:</label>";
-                    echo "<input class='perfil-lista-input perfilJs' name='perfilSenha' type='text' placeholder='Sua senha:'  value='$senha' disabled>";
-                    echo "</div>";
-
-                    echo "<div class='perfil-lista-item'>";
-                    echo "<label class='perfil-lista-label'>Seu nome:</label>";
-                    echo "<input class='perfil-lista-input perfilJs' name='perfilNome' type='text' placeholder='Seu nome:'  value='$nome' disabled>";
-                    echo "</div>";
-
-                    echo "<div class='perfil-lista-item'>";
-                    echo "<label class='perfil-lista-label'>Sua academia:</label>";
-                    echo "<input class='perfil-lista-input perfilJs' name='perfilAcademia' type='text' placeholder='Sua academia'  value='$academia' disabled>";
-                    echo "</div>";
-
-                    echo "<div class='perfil-lista-item'>";
-                    echo "<label class='perfil-lista-label'>Sexo:</label>";
-                    echo "<input class='perfil-lista-input perfilJs' name='perfilSexo' type='text' placeholder='Seu sexo'  value='$sexo' disabled>";
-                    echo "</div>";
-
-                    echo "<div class='perfil-lista-item'>";
-                    echo "<label class='perfil-lista-label'>Sua idade:</label>";
-                    echo "<input class='perfil-lista-input perfilJs' name='perfilIdade' type='text' placeholder='Sua idade'  value='$idade' disabled>";
-                    echo "</div>";
-                }
             ?>
+                    <div class='perfil-lista-item'>
+                    <label class='perfil-lista-label'>Seu email:</label>
+                    <input class='perfil-lista-input' name='perfilEmail' type='text' placeholder='Seu email:' value='<?php echo $email; ?>' disabled>
+                    </div>
+
+                    <div class='perfil-lista-item' >
+                    <label class='perfil-lista-label'>Sua senha:</label>
+                    <input class='perfil-lista-input perfilJs' name='perfilSenha' type='text' placeholder='Sua senha:'  value='<?php echo $senha; ?>' disabled>
+                    </div>
+
+                    <div class='perfil-lista-item'>
+                    <label class='perfil-lista-label'>Seu nome:</label>
+                    <input class='perfil-lista-input perfilJs' name='perfilNome' type='text' placeholder='Seu nome:'  value='<?php echo $nome; ?>' disabled>
+                    </div>
+
+                    <div class='perfil-lista-item'>
+                    <label class='perfil-lista-label'>Sua academia:</label>
+                    <input class='perfil-lista-input perfilJs' name='perfilAcademia' type='text' placeholder='Sua academia'  value='<?php echo $academia; ?>' disabled>
+                    </div>
+
+                    <div class='perfil-lista-item'>
+                    <label class='perfil-lista-label'>Sexo:</label>
+                    <input class='perfil-lista-input perfilJs' name='perfilSexo' type='text' placeholder='Seu sexo'  value='<?php echo $sexo; ?>' disabled>
+                    </div>
+
+                    <div class='perfil-lista-item'>
+                    <label class='perfil-lista-label'>Sua idade:</label>
+                    <input class='perfil-lista-input perfilJs' name='perfilIdade' type='text' placeholder='Sua idade'  value='<?php echo $idade; ?>' disabled>
+                    </div>
+            <?php 
+            }
+            else{
+                header("location:./conta");
+            }
+
+           ?>
             <div class="perfil-lista-botoes">
                     <button class="perfil-lista-editar" type="button">Editar</button>
                     <button class="perfil-lista-salvar" type="submit">Salvar</button>
