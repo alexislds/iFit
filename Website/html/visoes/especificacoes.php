@@ -84,38 +84,38 @@
          <?php if(isset($_SESSION['id_usuario'])) { ?>
                <div class='especificacoes-lista-item'>
                <label class='especificacoes-lista-label'>A quanto tempo treina e quantos dias na semana você treina?</label> 
-               <input class='especificacoes-lista-input' name='tempo' type='text' value='<?php echo $tempo ?>' disabled>
+               <input class='especificacoes-lista-input' name='tempo' type='text' value='<?php echo $tempo ?>'>
                </div>
 
                <div class='especificacoes-lista-item'>
                <label class='especificacoes-lista-label'>Qual meu foco:</label>
-               <input class='especificacoes-lista-input' name='foco' type='text' value='<?php echo $foco ?>' disabled>
+               <input class='especificacoes-lista-input' name='foco' type='text' value='<?php echo $foco ?>'>
                </div>
 
 
                <div class='especificacoes-lista-item'>
                <label class='especificacoes-lista-label'>Altura:</label>
-               <input class='especificacoes-lista-input' name='altura' type='text' value='<?php echo $altura ?>' disabled>
+               <input class='especificacoes-lista-input' name='altura' type='text' value='<?php echo $altura ?>'>
                </div>
 
                <div class='especificacoes-lista-item'>
                <label class='especificacoes-lista-label'>Peso:</label>
-               <input class='especificacoes-lista-input' name='peso' type='text' value='<?php echo $peso ?>' disabled>
+               <input class='especificacoes-lista-input' name='peso' type='text' value='<?php echo $peso ?>'>
                </div>
 
                <div class='especificacoes-lista-item'>
                <label class='especificacoes-lista-label'>Problemas de saude,se sim qual?</label>
-               <input class='especificacoes-lista-input' name='saude' type='text' value='<?php echo $saude ?>' disabled>
+               <input class='especificacoes-lista-input' name='saude' type='text' value='<?php echo $saude ?>'>
                </div>
 
                <div class='especificacoes-lista-item'>
                <label class='especificacoes-lista-label'>Possui ou teve lesões,se sim qual?</label>
-               <input class='especificacoes-lista-input' name='lesoes' type='text' value='<?php echo $lesoes ?>' disabled>
+               <input class='especificacoes-lista-input' name='lesoes' type='text' value='<?php echo $lesoes ?>'>
                </div>
 
                <div class='especificacoes-lista-item'>
                <label class='especificacoes-lista-label'>Pratica ou praticou algum esporte,se sim qual?</label>
-               <input class='especificacoes-lista-input' name='pratica' type='text' value='<?php echo $pratica ?>' disabled>
+               <input class='especificacoes-lista-input' name='pratica' type='text' value='<?php echo $pratica ?>'>
 
                <div class="especificacoes-lista-botoes">
                   <button class="especificacoes-lista-editar" type="button">Editar</button>

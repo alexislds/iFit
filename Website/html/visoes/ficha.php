@@ -6,7 +6,12 @@
             $idUsuario = intval($_SESSION['id_usuario']);
             $nomeProfessor = "'" . $_SESSION['nome'] . "'";
 
+            var_dump($_POST['fichaSolicitacao']);
+            var_dump($_POST['fichaAluno']);
+            var_dump($_POST['fichaTipo']);
+
             if(isset($_POST['fichaSolicitacao'], $_POST['fichaAluno'], $_POST['fichaTipo'])) {
+                echo '1';
                 $idProfessor = intval($_SESSION['id_usuario']);
                 $fichaSolicitacao = intval($_POST['fichaSolicitacao']);
                 $idAluno = intval($_POST['fichaAluno']);
@@ -66,11 +71,11 @@
     <h1 class="ficha-titulo">Ficha de Treino</h1>
     <div class="ficha-conteudo">
         <div class="ficha-conteudo-cima">
-            <input disabled type="text" class="ficha-conteudo-cima-campo" placeholder="Nome do aluno" value="<?php echo $resultadoFicha['nome_aluno']; ?>">
-            <input disabled type="text" class="ficha-conteudo-cima-campo" placeholder="Nome do professor" value="<?php echo $resultadoFicha['nome_professor']; ?>">
-            <input disabled type="text" class="ficha-conteudo-cima-campo" placeholder="Objetivo da ficha" value="<?php echo $resultadoFicha['objetivo']; ?>">
-            <input disabled type="text" class="ficha-conteudo-cima-campo" placeholder="Observações" value="<?php echo $resultadoFicha['observacoes']; ?>">
-            <input disabled type="text" class="ficha-conteudo-cima-campo ficha-conteudo-cima-data" placeholder="Data de atualização" value="<?php echo $resultadoFicha['data_atualizacao']; ?>">
+            <input type="text" class="ficha-conteudo-cima-campo" placeholder="Nome do aluno" value="<?php echo $resultadoFicha['nome_aluno']; ?>">
+            <input type="text" class="ficha-conteudo-cima-campo" placeholder="Nome do professor" value="<?php echo $resultadoFicha['nome_professor']; ?>">
+            <input type="text" class="ficha-conteudo-cima-campo" placeholder="Objetivo da ficha" value="<?php echo $resultadoFicha['objetivo']; ?>">
+            <input type="text" class="ficha-conteudo-cima-campo" placeholder="Observações" value="<?php echo $resultadoFicha['observacoes']; ?>">
+            <input type="text" class="ficha-conteudo-cima-campo ficha-conteudo-cima-data" placeholder="Data de atualização" value="<?php echo $resultadoFicha['data_atualizacao']; ?>">
         </div>
         <div class="ficha-conteudo-baixo">
             <div class="ficha-conteudo-baixo-treino">
@@ -91,7 +96,7 @@
                             foreach($resultadoExercicio as $chave => $valor) {
                                 echo "<tr>";
                                 foreach($resultadoExercicio[$chave] as $valor2){
-                                    echo "<td  class='ficha-conteudo-baixo-treino-dado'><input disabled type='text' value='$valor2'></td>";
+                                    echo "<td  class='ficha-conteudo-baixo-treino-dado'><input type='text' value='$valor2'></td>";
                                 }
                                 echo "</tr>";
                             }
