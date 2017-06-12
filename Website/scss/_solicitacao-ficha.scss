@@ -1,0 +1,126 @@
+.solicitacao-ficha {
+    &-form {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+
+    &-titulo {
+        font-family: $fonteB;
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &-especificacoes {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 20px 0;
+        width: 50%;
+        margin-top: 40px;
+
+        &-titulo {
+            font-family: $fonteB;
+            font-size: 20px;
+        }
+
+        &-lista {
+            margin: 40px auto 0;
+            width: 90%;
+
+           &-item:not(:first-of-type){
+             margin-top: 20px;
+
+        }
+ 
+            &-label{
+            	font-family: $fonteA;
+            }
+
+            &-input {
+            	margin-top:6px;
+            	border: 1px solid #d4d4d4;
+	            background: #f1f1f1;
+	            color: black;
+	            border-radius: 5px;
+	            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+	            height: 40px;
+	            width: 100%;
+	            text-align: center;
+	            transition: all 300ms;
+            }
+
+            &-input:not(:first-of-type) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &-dados {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 20px 0;
+        width: 50%;
+        margin-top: 40px;
+
+        &-titulo {
+            font-family: $fonteB;
+            font-size: 20px;
+        }
+
+        &-lista {
+            margin: 39px auto 0;
+            width: 90%;
+
+
+         &-item:not(:first-of-type){
+            margin-top: 20px;
+
+        }   
+     
+           &-label{
+            font-family: $fonteA; 
+        }
+
+            &-input {
+            	margin-top: 6px;
+                background: #f1f1f1;
+                color: black;
+                border-radius: 5px;
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+                height: 40px;
+                width: 100%;
+                text-align: center;
+                transition: all 300ms;
+            }
+
+             &-textarea {
+             	margin-top:6px;
+             	background: #f1f1f1;
+                height: 140px;
+                width: 448px;
+                text-align: left;
+            }
+        } 
+    }
+
+    &-botao {
+        margin: 20px auto 0px;
+        display: inline-block;
+    }
+
+    &-aceitar {
+        background-color: #00C851;
+        color: white;
+        font-family: $fonteA;
+        padding: 4px 15px 7px;
+
+        &:hover {
+            background-color: #00953c;
+        }
+    }
+}
