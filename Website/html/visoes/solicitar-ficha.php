@@ -39,21 +39,21 @@
            if(isset($_SESSION['id_usuario'])){ ?>
             <div class='solicita-ficha-lista-item'>
             <label class='solicita-ficha-lista-label'>Voce gostaria de um professor com especialidade em que area? </label>
-            <input class='solicita-ficha-lista-input' name='solicitaTipo' type='text' placeholder='Voce gostaria de um professor com especialidade em que area?'>
+            <input required class='solicita-ficha-lista-input' name='solicitaTipo' type='text' placeholder='Voce gostaria de um professor com especialidade em que area?'>
             </div>
             <div class='solicita-ficha-lista-item'>
             <label class='solicita-ficha-lista-label'>Descreva brevemente o que necessita em sua ficha de treino, quanto mais melhor.</label>
-            <input class='solicita-ficha-lista-input' name='solicitaDescricao' type='text' placeholder='Descreva brevemente o que necessita em sua ficha de treino, quanto mais melhor.'>
+            <input required class='solicita-ficha-lista-input' name='solicitaDescricao' type='text' placeholder='Descreva brevemente o que necessita em sua ficha de treino, quanto mais melhor.'>
             </div>
             <div class="solicita-ficha-lista-botoes">
                 <button class="solicita-ficha-lista-enviar" type="submit">Enviar</button>
             </div>
-        <?php 
+        <?php  
             } 
             else{
                 header("location:./conta");
             }
-        ?>
+        ?> 
         </div>
     </form>
 </section>

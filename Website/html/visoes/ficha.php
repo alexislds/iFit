@@ -8,7 +8,7 @@
 
     }
 
-?>
+?> 
 <section class="ficha">
     <h1 class="ficha-titulo">Ficha de Treino</h1>
     <div class="ficha-conteudo">

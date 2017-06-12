@@ -966,7 +966,7 @@ body {
 .solicita-ficha-lista-input {
   margin-top: 9px;
   border: 1px solid #d4d4d4;
-  background: #f1f1f1;
+  background: white;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -1093,12 +1093,22 @@ body {
 }
 
 .aluno-especificacoes-lista {
-  margin: 40px auto 0;
+  margin: 20px auto 0;
   width: 90%;
 }
 
+.aluno-especificacoes-lista-item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.aluno-especificacoes-lista-label {
+  font-family: "Lato", sans-serif;
+}
+
 .aluno-especificacoes-lista-input {
-  background: white;
+  margin-top: 6px;
+  border: 1px solid #d4d4d4;
+  background: #f1f1f1;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -1246,8 +1256,18 @@ body {
   width: 90%;
 }
 
+.solicitacao-ficha-especificacoes-lista-item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.solicitacao-ficha-especificacoes-lista-label {
+  font-family: "Lato", sans-serif;
+}
+
 .solicitacao-ficha-especificacoes-lista-input {
-  background: white;
+  margin-top: 6px;
+  border: 1px solid #d4d4d4;
+  background: #f1f1f1;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -1285,12 +1305,21 @@ body {
 }
 
 .solicitacao-ficha-dados-lista {
-  margin: 40px auto 0;
+  margin: 39px auto 0;
   width: 90%;
 }
 
+.solicitacao-ficha-dados-lista-item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.solicitacao-ficha-dados-lista-label {
+  font-family: "Lato", sans-serif;
+}
+
 .solicitacao-ficha-dados-lista-input {
-  background: white;
+  margin-top: 6px;
+  background: #f1f1f1;
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -1301,9 +1330,11 @@ body {
   transition: all 300ms;
 }
 
-.solicitacao-ficha-dados-lista-input:not(:first-child) {
-  margin-top: 20px;
+.solicitacao-ficha-dados-lista-textarea {
+  margin-top: 6px;
+  background: #f1f1f1;
   height: 140px;
+  width: 448px;
   text-align: left;
 }
 
