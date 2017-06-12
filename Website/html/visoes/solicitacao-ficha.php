@@ -1,44 +1,44 @@
 <?php 
+    if(isset($_SESSION['id_usuario'])){
+        if(!empty($_POST)){
+            $solicitacaoIdFicha = intval($_POST['solicitacaoIdFicha']);
+            $solicitacaoIdAluno =  intval($_POST['solicitacaoIdAluno']);
 
-    if(!empty($_POST)){
-        $solicitacaoIdFicha = intval($_POST['solicitacaoIdFicha']);
-        $solicitacaoIdAluno =  intval($_POST['solicitacaoIdAluno']);
+            $resultado = $conexao->query("
 
-        $resultado = $conexao->query("
+                SELECT *
+                FROM ESPECIFICACAO
+                WHERE id_usuario = $solicitacaoIdAluno;
 
-            SELECT *
-            FROM ESPECIFICACAO
-            WHERE id_usuario = $solicitacaoIdAluno;
+            ")->fetch_assoc();
 
-        ")->fetch_assoc();
+            $resultado2 = $conexao->query("
 
-        $resultado2 = $conexao->query("
+                SELECT *
+                FROM SOLICITACAO_FICHA
+                WHERE id_solicitacao_ficha = $solicitacaoIdFicha;
 
-            SELECT *
-            FROM SOLICITACAO_FICHA
-            WHERE id_solicitacao_ficha = $solicitacaoIdFicha;
+            ")->fetch_assoc();
 
-        ")->fetch_assoc();
+            if(!is_null($resultado) && !is_null($resultado2)){
+                $tempo = $resultado['tempo'];
+                $foco = $resultado['foco'];
+                $peso =  $resultado['peso'];
+                $altura = $resultado['altura'];
+                $lesoes = $resultado['lesoes'];
+                $saude = $resultado['saude'];
+                $pratica = $resultado['pratica'];
 
-        if(!is_null($resultado) && !is_null($resultado2)){
-            $tempo = $resultado['tempo'];
-            $foco = $resultado['foco'];
-            $peso =  $resultado['peso'];
-            $altura = $resultado['altura'];
-            $lesoes = $resultado['lesoes'];
-            $saude = $resultado['saude'];
-            $pratica = $resultado['pratica'];
-
-            $tipo = $resultado2['tipo'];
-            $descricao = $resultado2['descricao'];
+                $tipo = $resultado2['tipo'];
+                $descricao = $resultado2['descricao'];
+            }
         }
     }
-
 ?>
 <section class="solicitacao-ficha">
     <form action="./ficha" class="solicitacao-ficha-form" method="post">
-        <input type="hidden" name="fichaSolicitacao">
-        <input type="hidden" name="fichaAluno">
+        <input type="hidden" name="fichaSolicitacao" value="<?php echo $solicitacaoIdFicha ?>">
+        <input type="hidden" name="fichaAluno" value="<?php echo $solicitacaoIdAluno ?>">
         <h1 class="solicitacao-ficha-titulo">Solicitação da Ficha</h1>
         <div class="solicitacao-ficha-especificacoes">
             <h1 class="solicitacao-ficha-especificacoes-titulo">Especificações</h1>
