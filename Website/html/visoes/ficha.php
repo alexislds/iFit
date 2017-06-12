@@ -5,11 +5,7 @@
         if(!empty($_POST)){
             $idUsuario = intval($_SESSION['id_usuario']);
             $nomeProfessor = "'" . $_SESSION['nome'] . "'";
-
-            var_dump($_POST['fichaSolicitacao']);
-            var_dump($_POST['fichaAluno']);
-            var_dump($_POST['fichaTipo']);
-
+            
             if(isset($_POST['fichaSolicitacao'], $_POST['fichaAluno'], $_POST['fichaTipo'])) {
                 echo '1';
                 $idProfessor = intval($_SESSION['id_usuario']);
