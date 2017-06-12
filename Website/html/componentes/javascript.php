@@ -6,3 +6,4 @@
 <script src="./js/conta.js"></script>
 <script src="./js/perfil.js"></script>
 <script src="./js/especificacoes.js"></script>
+<script src="./js/ficha.js"></script>
