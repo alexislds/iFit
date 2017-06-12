@@ -1,3 +1,33 @@
+<?php 
+
+  if(isset($_SESSION['id_usuario'])){
+    $idAluno = intval($_POST['idAluno']);
+
+    $resultado1 = $conexao->query("
+      SELECT *
+      FROM Especificacao
+      WHERE id_usuario = $idAluno;
+    ")->fetch_assoc();
+
+    $tempo = $resultado1['tempo'];
+    $foco = $resultado1['foco'];
+    $peso =  $resultado1['peso'];
+    $altura = $resultado1['altura'];
+    $lesoes = $resultado1['lesoes'];
+    $saude = $resultado1['saude'];
+    $pratica = $resultado1['pratica'];
+
+    $resultado2 = $conexao->query("
+      SELECT id_ficha, objetivo
+      FROM Ficha
+      WHERE id_aluno = $idAluno;
+    ")->fetch_all();
+
+    if(!is_null($resultado2) && !is_null($resultado1)){
+
+
+?>
+
 <section class="aluno">
     <h1 class="aluno-titulo">Aluno</h1>
     <div class="aluno-especificacoes">
@@ -46,16 +76,23 @@
     <div class="aluno-fichas">
         <h1 class="aluno-fichas-titulo">Fichas</h1>
         <div class="aluno-fichas-lista">
-            <button class="aluno-fichas-lista-botao" type="button"> <a class="aluno-fichas-lista-link" href="#">Ficha de treino</a> </button>
-            <button class="aluno-fichas-lista-botao"><a class="aluno-fichas-lista-link" href="">Ficha de treino para quando eu tiver uma luta marcada</a></button>
-            <button class="aluno-fichas-lista-botao"><a class="aluno-fichas-lista-link" href="#">Ficha de treino quando eu estiver acima do peso</a></button>
-            <button class="aluno-fichas-lista-botao"><a class="aluno-fichas-lista-link" a href="#">Ficha de treino quando eu estiver acima do peso</a></button>
-            <button class="aluno-fichas-lista-botao"><a class="aluno-fichas-lista-link" a href="#">Ficha de treino</a></button>
-            <button class="aluno-fichas-lista-botao" type="button"><a class="aluno-fichas-lista-link" href="#">Ficha de treino</a></button>
-            <button class="aluno-fichas-lista-botao"><a class="aluno-fichas-lista-link" href="">Ficha de treino para quando eu tiver uma luta marcada</a></button>
-            <button class="aluno-fichas-lista-botao"><a class="aluno-fichas-lista-link" href="#">Ficha de treino quando eu estiver acima do peso</a></button>
-            <button class="aluno-fichas-lista-botao"><a class="aluno-fichas-lista-link" a href="#">Ficha de treino quando eu estiver acima do peso</a></button>
-            <button class="aluno-fichas-lista-botao"><a class="aluno-fichas-lista-link" a href="#">Ficha de treino</a></button>
+            <?php
+              foreach($resultado2 as $chave=>$valor){
+            ?>  
+              <form action="./ficha" method="post">
+                <button class="aluno-fichas-lista-botao" name="idFicha" value="<?php echo $resultado2[$chave][0]; ?>" type="submit"><?php echo $resultado2[$chave][1]; ?></button>
+              </form>
+            <?php
+              }
+            ?>
         </div>
     </div>
 </section>
+<?php
+  }
+  }
+
+  else{
+        header("location:./menu");
+  }
+?>
